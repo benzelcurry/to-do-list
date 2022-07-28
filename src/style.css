@@ -1,3 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Robot', Arial, Helvetica, sans-serif;
+}
+
+#content {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 100px 1fr 50px;
+}
+
+.header {
+    background-color: #474b5a;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 275px 1fr;
+}
+
 .sidebar {
-    color: red;
+    background-color: #949cb9;
+}
+
+.tasks-display {
+    background-color: #e7e8f1;
+}
+
+.footer {
+    display: flex;
+    background-color: #474b5a;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.github {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(339deg) brightness(104%) contrast(101%);
+}
+
+.github:hover {
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3);;
 }
