@@ -1,1 +1,1 @@
-# to-do-list
+To-Do List project for The Odin Project's JavaScript path.
