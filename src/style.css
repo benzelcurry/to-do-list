@@ -14,6 +14,19 @@ body {
 
 .header {
     background-color: #474b5a;
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    gap: 10px;
+    font-size: 42px;
+    color: #e7e8f1;
+}
+
+.header-icon {
+    height: 42px;
+    width: auto;
+    padding-bottom: 2px;
+    filter: invert(97%) sepia(5%) saturate(1089%) hue-rotate(187deg) brightness(100%) contrast(90%);
 }
 
 .main {
@@ -40,12 +53,12 @@ body {
 
 a {
     text-decoration: none;
-    color: white;
+    color: #e7e8f1;
     font-size: 18px;
 }
 
 .github {
-    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(339deg) brightness(104%) contrast(101%);
+    filter: invert(97%) sepia(5%) saturate(1089%) hue-rotate(187deg) brightness(100%) contrast(90%);
 }
 
 .github:hover {
