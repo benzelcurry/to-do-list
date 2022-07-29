@@ -341,9 +341,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(10);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(10);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(11);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
 // Imports
 
@@ -351,13 +351,55 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n    margin: 0;\n    font-family: 'Robot', Arial, Helvetica, sans-serif;\n}\n\n#content {\n    height: 100vh;\n    width: 100vw;\n    display: grid;\n    grid-template-rows: 100px 1fr 50px;\n}\n\n/* Header content */\n.header {\n    background-color: #474b5a;\n    display: flex;\n    align-items: center;\n    padding: 40px;\n    gap: 10px;\n    font-size: 42px;\n    color: #e7e8f1;\n}\n\n.header-icon {\n    height: 42px;\n    width: auto;\n    padding-bottom: 2px;\n    filter: invert(97%) sepia(5%) saturate(1089%) hue-rotate(187deg) brightness(100%) contrast(90%);\n}\n\n/* Main content */\n.main {\n    display: grid;\n    grid-template-columns: 275px 1fr;\n}\n\n.sidebar {\n    background-color: #949cb9;\n}\n\n.tasks-display {\n    display: grid;\n    grid-auto-rows: 50px;\n    gap: 25px;\n    padding: 25px;\n    background-color: #e7e8f1;\n}\n\nbutton {\n    height: 25px;\n    width: 100px;\n}\n\n.task-card {\n    background-color: #fff;\n    width: 500px;\n    height: 50px;\n    border-radius: 20px;\n}\n\n/* Footer content */\n.footer {\n    display: flex;\n    background-color: #474b5a;\n    align-items: center;\n    justify-content: center;\n    gap: 8px;\n    color: white;\n}\n\na {\n    text-decoration: none;\n    color: #e7e8f1;\n    font-size: 18px;\n}\n\n.github {\n    filter: invert(97%) sepia(5%) saturate(1089%) hue-rotate(187deg) brightness(100%) contrast(90%);\n}\n\n.github:hover {\n    -webkit-transform: scale(1.3);\n    -ms-transform: scale(1.3);\n    transform: scale(1.3);;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n    margin: 0;\n    font-family: 'Robot', Arial, Helvetica, sans-serif;\n}\n\n#content {\n    height: 100vh;\n    width: 100vw;\n    display: grid;\n    grid-template-rows: 100px 1fr 50px;\n}\n\n/* Header content */\n.header {\n    background-color: #474b5a;\n    display: flex;\n    align-items: center;\n    padding: 40px;\n    gap: 10px;\n    font-size: 42px;\n    color: #e7e8f1;\n}\n\n.header-icon {\n    height: 42px;\n    width: auto;\n    padding-bottom: 2px;\n    filter: invert(97%) sepia(5%) saturate(1089%) hue-rotate(187deg) brightness(100%) contrast(90%);\n}\n\n/* Main content */\n.main {\n    display: grid;\n    grid-template-columns: 275px 1fr;\n}\n\n.sidebar {\n    background-color: #949cb9;\n}\n\n.tasks-display {\n    display: grid;\n    grid-auto-rows: 50px;\n    gap: 25px;\n    padding: 25px;\n    background-color: #e7e8f1;\n}\n\n.tasks-display > button {\n    height: 25px;\n    width: 100px;\n}\n\n.task-card {\n    display: flex;\n    background-color: #fff;\n    width: 500px;\n    height: 30px;\n    border-radius: 30px;\n    align-items: center;\n    justify-content: space-between;\n    padding: 10px;\n}\n\n/* Footer content */\n.footer {\n    display: flex;\n    background-color: #474b5a;\n    align-items: center;\n    justify-content: center;\n    gap: 8px;\n    color: white;\n}\n\na {\n    text-decoration: none;\n    color: #e7e8f1;\n    font-size: 18px;\n}\n\n.github {\n    filter: invert(97%) sepia(5%) saturate(1089%) hue-rotate(187deg) brightness(100%) contrast(90%);\n}\n\n.github:hover {\n    -webkit-transform: scale(1.3);\n    -ms-transform: scale(1.3);\n    transform: scale(1.3);;\n}\n\n/* Pop-up data entry form */\n\n.form-popup {\n    display: none;\n    align-self: center;\n    justify-self: center;\n    border: 3px solid black;\n    z-index: 9;\n    position: fixed;\n  }\n  \n  /* Add styles to the form container */\n  .form-container {\n    display: grid;\n    width: 750px;\n    padding: 10px;\n    background-color: #bac1da;\n  }\n  \n  /* input fields */\n  input[type=text], input[type=number], select {\n    width: 50%;\n    height: 40px;\n    padding: 0 10px 0 10px;\n    margin: 5px 0 22px 0;\n    border: none;\n    background: #e7e8f1;\n    font-size: 16px;\n  }\n\n  select {\n    width: 395px;\n  }\n  \n  \n  /* Set a style for the submit button */\n  .form-container button {\n    background-color: #04AA6D;\n    color: white;\n    padding: 16px 20px;\n    border: none;\n    cursor: pointer;\n    width: 40%;\n    margin-bottom:10px;\n    opacity: 0.8;\n    border-radius: 10px;\n\n  }\n  \n  /* Add a red background color to the cancel button */\n  .form-container .btn-cancel {\n    background-color: red;\n  }\n  \n  /* Add some hover effects to buttons */\n  .form-container button:hover {\n    opacity: 1;\n  }\n  \n  /* positioning for popup buttons */\n  .popup-buttons {\n      display: flex;\n      gap: 40px;\n      margin: 40px;\n      justify-content: center;\n  }", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 /* 9 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "createTask": () => (/* binding */ createTask),
+/* harmony export */   "default": () => (/* binding */ Task),
+/* harmony export */   "myTasks": () => (/* binding */ myTasks)
+/* harmony export */ });
+// Create task module
+
+class Task {
+    constructor(title, description, dueDate, priority) {
+        this.title = title;
+        this.description = description;
+        this.dueDate = dueDate;
+        this.priority = priority;
+    }
+}
+
+let myTasks = [];
+
+function createTask() {
+    let myTasks = [];
+    let taskTitle = "Homework";
+    let taskDescription = "Do homework";
+    let taskDue = "Soon";
+    let taskPriority = "Important";
+    let submitButton = document.querySelector(".btn-submit");
+
+    // WORK ON GETTING CARDS TO ADD TO SCREEN FOR EACH TASK
+
+    submitButton.addEventListener('click', () => {
+        const newTask = new Task(taskTitle, taskDescription, taskDue, taskPriority);
+        
+        myTasks.push(newTask);
+    });
+
+    return myTasks;
+}
+
+/***/ }),
+/* 10 */
 /***/ ((module) => {
 
 
@@ -367,7 +409,7 @@ module.exports = function (i) {
 };
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ ((module) => {
 
 
@@ -473,48 +515,6 @@ module.exports = function (cssWithMappingToString) {
   return list;
 };
 
-/***/ }),
-/* 11 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "createTask": () => (/* binding */ createTask),
-/* harmony export */   "default": () => (/* binding */ Task),
-/* harmony export */   "myTasks": () => (/* binding */ myTasks)
-/* harmony export */ });
-// Create task module
-
-class Task {
-    constructor(title, description, dueDate, priority) {
-        this.title = title;
-        this.description = description;
-        this.dueDate = dueDate;
-        this.priority = priority;
-    }
-}
-
-let myTasks = [];
-
-function createTask() {
-    let myTasks = [];
-    let taskTitle = "Homework";
-    let taskDescription = "Do homework";
-    let taskDue = "Soon";
-    let taskPriority = "Important";
-    let submitButton = document.querySelector(".btn-submit");
-
-    // WORK ON GETTING CARDS TO ADD TO SCREEN FOR EACH TASK
-
-    submitButton.addEventListener('click', () => {
-        const newTask = new Task(taskTitle, taskDescription, taskDue, taskPriority);
-        
-        myTasks.push(newTask);
-    });
-
-    return myTasks;
-}
-
 /***/ })
 /******/ 	]);
 /************************************************************************/
@@ -594,14 +594,33 @@ var __webpack_exports__ = {};
 (() => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _create_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(11);
+/* harmony import */ var _create_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(9);
 
 
 
 let body = document.querySelector('.tasks-display');
+let addButton = document.querySelector('.open-form');
+let submitTask = document.querySelector('.btn');
+let cancelButton = document.querySelector('.btn-cancel');
 let printButton = document.querySelector('.btn-console');
 let submitButton = document.querySelector('.btn-submit');
 let tasks = (0,_create_js__WEBPACK_IMPORTED_MODULE_1__.createTask)();
+
+// open + close controls for the task entry popup form
+addButton.addEventListener('click', () => {
+    document.querySelector('.form-popup').style.display = "block";
+});
+  
+cancelButton.addEventListener('click', () => {
+    document.getElementById("myForm").style.display = "none";
+});
+
+// prevent page from refreshing when submit button is hit
+let form = document.querySelector(".form-container");
+
+function handleForm(event) { event.preventDefault(); } 
+form.addEventListener('submit', handleForm);
+
 
 printButton.addEventListener('click', () => {
     console.log(tasks);

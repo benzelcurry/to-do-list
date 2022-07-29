@@ -48,16 +48,20 @@ body {
     background-color: #e7e8f1;
 }
 
-button {
+.tasks-display > button {
     height: 25px;
     width: 100px;
 }
 
 .task-card {
+    display: flex;
     background-color: #fff;
     width: 500px;
-    height: 50px;
-    border-radius: 20px;
+    height: 30px;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
 }
 
 /* Footer content */
@@ -85,3 +89,70 @@ a {
     -ms-transform: scale(1.3);
     transform: scale(1.3);;
 }
+
+/* Pop-up data entry form */
+
+.form-popup {
+    display: none;
+    align-self: center;
+    justify-self: center;
+    border: 3px solid black;
+    z-index: 9;
+    position: fixed;
+  }
+  
+  /* Add styles to the form container */
+  .form-container {
+    display: grid;
+    width: 750px;
+    padding: 10px;
+    background-color: #bac1da;
+  }
+  
+  /* input fields */
+  input[type=text], input[type=number], select {
+    width: 50%;
+    height: 40px;
+    padding: 0 10px 0 10px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #e7e8f1;
+    font-size: 16px;
+  }
+
+  select {
+    width: 395px;
+  }
+  
+  
+  /* Set a style for the submit button */
+  .form-container button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 40%;
+    margin-bottom:10px;
+    opacity: 0.8;
+    border-radius: 10px;
+
+  }
+  
+  /* Add a red background color to the cancel button */
+  .form-container .btn-cancel {
+    background-color: red;
+  }
+  
+  /* Add some hover effects to buttons */
+  .form-container button:hover {
+    opacity: 1;
+  }
+  
+  /* positioning for popup buttons */
+  .popup-buttons {
+      display: flex;
+      gap: 40px;
+      margin: 40px;
+      justify-content: center;
+  }
