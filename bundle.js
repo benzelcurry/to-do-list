@@ -341,9 +341,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(10);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(11);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(10);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
 // Imports
 
@@ -358,48 +358,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, "body {\n    margin: 0;\n    font-famil
 
 /***/ }),
 /* 9 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "createTask": () => (/* binding */ createTask),
-/* harmony export */   "default": () => (/* binding */ Task),
-/* harmony export */   "myTasks": () => (/* binding */ myTasks)
-/* harmony export */ });
-// Create task module
-
-class Task {
-    constructor(title, description, dueDate, priority) {
-        this.title = title;
-        this.description = description;
-        this.dueDate = dueDate;
-        this.priority = priority;
-    }
-}
-
-let myTasks = [];
-
-function createTask() {
-    let myTasks = [];
-    let taskTitle = "Homework";
-    let taskDescription = "Do homework";
-    let taskDue = "Soon";
-    let taskPriority = "Important";
-    let submitButton = document.querySelector(".btn-submit");
-
-    // WORK ON GETTING CARDS TO ADD TO SCREEN FOR EACH TASK
-
-    submitButton.addEventListener('click', () => {
-        const newTask = new Task(taskTitle, taskDescription, taskDue, taskPriority);
-        
-        myTasks.push(newTask);
-    });
-
-    return myTasks;
-}
-
-/***/ }),
-/* 10 */
 /***/ ((module) => {
 
 
@@ -409,7 +367,7 @@ module.exports = function (i) {
 };
 
 /***/ }),
-/* 11 */
+/* 10 */
 /***/ ((module) => {
 
 
@@ -515,6 +473,70 @@ module.exports = function (cssWithMappingToString) {
   return list;
 };
 
+/***/ }),
+/* 11 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "createTask": () => (/* binding */ createTask),
+/* harmony export */   "default": () => (/* binding */ Task)
+/* harmony export */ });
+// Create task module
+
+class Task {
+    constructor(title, description, dueDate, priority) {
+        this.title = title;
+        this.description = description;
+        this.dueDate = dueDate;
+        this.priority = priority;
+    }
+}
+
+let myTasks = [];
+let addButton = document.querySelector('.open-form');
+let submitTask = document.querySelector('.btn');
+let cancelButton = document.querySelector('.btn-cancel');
+
+// open + close controls for the task entry popup form
+addButton.addEventListener('click', () => {
+    document.querySelector('.form-popup').style.display = "block";
+});
+  
+cancelButton.addEventListener('click', () => {
+    document.getElementById("myForm").style.display = "none";
+});
+
+// prevent page from refreshing when submit button is hit
+let form = document.querySelector(".form-container");
+
+function handleForm(event) { event.preventDefault(); } 
+form.addEventListener('submit', handleForm);
+
+function createTask() {
+    let myTasks = [];
+    let taskTitle = document.querySelector('#task');
+    let taskDescription = document.querySelector('#notes');
+    let taskDue = document.querySelector('#due-date');
+    let taskPriority = document.querySelector('#priority');
+    let submitButton = document.querySelector(".btn");
+
+    // WORK ON GETTING CARDS TO ADD TO SCREEN FOR EACH TASK
+
+    submitButton.addEventListener('click', () => {
+        const newTask = new Task(taskTitle.value, taskDescription.value, taskDue.value, taskPriority.value);
+        
+        myTasks.push(newTask);
+        taskTitle.value = "";
+        taskDescription.value = "";
+        taskDue.value = "";
+        taskPriority.option = "high";
+        document.getElementById("myForm").style.display = "none";
+    });
+
+    return myTasks;
+}
+
 /***/ })
 /******/ 	]);
 /************************************************************************/
@@ -594,32 +616,14 @@ var __webpack_exports__ = {};
 (() => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _create_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(9);
+/* harmony import */ var _create_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(11);
 
 
 
 let body = document.querySelector('.tasks-display');
-let addButton = document.querySelector('.open-form');
-let submitTask = document.querySelector('.btn');
-let cancelButton = document.querySelector('.btn-cancel');
 let printButton = document.querySelector('.btn-console');
 let submitButton = document.querySelector('.btn-submit');
 let tasks = (0,_create_js__WEBPACK_IMPORTED_MODULE_1__.createTask)();
-
-// open + close controls for the task entry popup form
-addButton.addEventListener('click', () => {
-    document.querySelector('.form-popup').style.display = "block";
-});
-  
-cancelButton.addEventListener('click', () => {
-    document.getElementById("myForm").style.display = "none";
-});
-
-// prevent page from refreshing when submit button is hit
-let form = document.querySelector(".form-container");
-
-function handleForm(event) { event.preventDefault(); } 
-form.addEventListener('submit', handleForm);
 
 
 printButton.addEventListener('click', () => {
