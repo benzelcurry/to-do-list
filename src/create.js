@@ -1,15 +1,18 @@
-export default function createTask() {
-    let myTasks = [];
+// Create task module
 
-    class Task {
-        constructor(title, description, dueDate, priority) {
-            this.title = title;
-            this.description = description;
-            this.dueDate = dueDate;
-            this.priority = priority;
-        }
+export default class Task {
+    constructor(title, description, dueDate, priority) {
+        this.title = title;
+        this.description = description;
+        this.dueDate = dueDate;
+        this.priority = priority;
     }
+}
 
+export let myTasks = [];
+
+export function createTask() {
+    let myTasks = [];
     let taskTitle = "Homework";
     let taskDescription = "Do homework";
     let taskDue = "Soon";
@@ -22,9 +25,7 @@ export default function createTask() {
         const newTask = new Task(taskTitle, taskDescription, taskDue, taskPriority);
         
         myTasks.push(newTask);
-
-        console.log(myTasks);
     });
-        
+
     return myTasks;
 }
