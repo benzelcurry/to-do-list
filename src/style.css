@@ -57,6 +57,7 @@ button {
     background-color: #fff;
     width: 500px;
     height: 50px;
+    border-radius: 20px;
 }
 
 /* Footer content */

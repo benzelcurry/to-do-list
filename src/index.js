@@ -10,8 +10,15 @@ printButton.addEventListener('click', () => {
     console.log(tasks);
 });
 
+function addTask() {
+    for (let i = (tasks.length - 1); i < tasks.length; i++) {
+            let task = document.createElement('div');
+            task.classList.add('task-card');
+            task.innerText = `${tasks[i].title}, ${tasks[i].description}, ${tasks[i].dueDate}, ${tasks[i].priority}`;
+            body.appendChild(task);
+    }
+}
+
 submitButton.addEventListener('click', () => {
-    let task = document.createElement('div');
-    task.classList.add('task-card');
-    body.appendChild(task);
+    addTask();
 });
