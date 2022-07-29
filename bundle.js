@@ -351,7 +351,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n    margin: 0;\n    font-family: 'Robot', Arial, Helvetica, sans-serif;\n}\n\n#content {\n    height: 100vh;\n    width: 100vw;\n    display: grid;\n    grid-template-rows: 100px 1fr 50px;\n}\n\n/* Header content */\n.header {\n    background-color: #474b5a;\n    display: flex;\n    align-items: center;\n    padding: 40px;\n    gap: 10px;\n    font-size: 42px;\n    color: #e7e8f1;\n}\n\n.header-icon {\n    height: 42px;\n    width: auto;\n    padding-bottom: 2px;\n    filter: invert(97%) sepia(5%) saturate(1089%) hue-rotate(187deg) brightness(100%) contrast(90%);\n}\n\n/* Main content */\n.main {\n    display: grid;\n    grid-template-columns: 275px 1fr;\n}\n\n.sidebar {\n    background-color: #949cb9;\n}\n\n.tasks-display {\n    display: grid;\n    grid-auto-rows: 50px;\n    gap: 25px;\n    padding: 25px;\n    background-color: #e7e8f1;\n}\n\nbutton {\n    height: 25px;\n    width: 100px;\n}\n\n.task-card {\n    background-color: #fff;\n    width: 500px;\n    height: 50px;\n}\n\n/* Footer content */\n.footer {\n    display: flex;\n    background-color: #474b5a;\n    align-items: center;\n    justify-content: center;\n    gap: 8px;\n    color: white;\n}\n\na {\n    text-decoration: none;\n    color: #e7e8f1;\n    font-size: 18px;\n}\n\n.github {\n    filter: invert(97%) sepia(5%) saturate(1089%) hue-rotate(187deg) brightness(100%) contrast(90%);\n}\n\n.github:hover {\n    -webkit-transform: scale(1.3);\n    -ms-transform: scale(1.3);\n    transform: scale(1.3);;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n    margin: 0;\n    font-family: 'Robot', Arial, Helvetica, sans-serif;\n}\n\n#content {\n    height: 100vh;\n    width: 100vw;\n    display: grid;\n    grid-template-rows: 100px 1fr 50px;\n}\n\n/* Header content */\n.header {\n    background-color: #474b5a;\n    display: flex;\n    align-items: center;\n    padding: 40px;\n    gap: 10px;\n    font-size: 42px;\n    color: #e7e8f1;\n}\n\n.header-icon {\n    height: 42px;\n    width: auto;\n    padding-bottom: 2px;\n    filter: invert(97%) sepia(5%) saturate(1089%) hue-rotate(187deg) brightness(100%) contrast(90%);\n}\n\n/* Main content */\n.main {\n    display: grid;\n    grid-template-columns: 275px 1fr;\n}\n\n.sidebar {\n    background-color: #949cb9;\n}\n\n.tasks-display {\n    display: grid;\n    grid-auto-rows: 50px;\n    gap: 25px;\n    padding: 25px;\n    background-color: #e7e8f1;\n}\n\nbutton {\n    height: 25px;\n    width: 100px;\n}\n\n.task-card {\n    background-color: #fff;\n    width: 500px;\n    height: 50px;\n    border-radius: 20px;\n}\n\n/* Footer content */\n.footer {\n    display: flex;\n    background-color: #474b5a;\n    align-items: center;\n    justify-content: center;\n    gap: 8px;\n    color: white;\n}\n\na {\n    text-decoration: none;\n    color: #e7e8f1;\n    font-size: 18px;\n}\n\n.github {\n    filter: invert(97%) sepia(5%) saturate(1089%) hue-rotate(187deg) brightness(100%) contrast(90%);\n}\n\n.github:hover {\n    -webkit-transform: scale(1.3);\n    -ms-transform: scale(1.3);\n    transform: scale(1.3);;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -607,10 +607,17 @@ printButton.addEventListener('click', () => {
     console.log(tasks);
 });
 
+function addTask() {
+    for (let i = (tasks.length - 1); i < tasks.length; i++) {
+            let task = document.createElement('div');
+            task.classList.add('task-card');
+            task.innerText = `${tasks[i].title}, ${tasks[i].description}, ${tasks[i].dueDate}, ${tasks[i].priority}`;
+            body.appendChild(task);
+    }
+}
+
 submitButton.addEventListener('click', () => {
-    let task = document.createElement('div');
-    task.classList.add('task-card');
-    body.appendChild(task);
+    addTask();
 });
 })();
 
