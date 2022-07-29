@@ -473,6 +473,45 @@ module.exports = function (cssWithMappingToString) {
   return list;
 };
 
+/***/ }),
+/* 11 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ createTask)
+/* harmony export */ });
+function createTask() {
+    let myTasks = [];
+
+    class Task {
+        constructor(title, description, dueDate, priority) {
+            this.title = title;
+            this.description = description;
+            this.dueDate = dueDate;
+            this.priority = priority;
+        }
+    }
+
+    let taskTitle = "Homework";
+    let taskDescription = "Do homework";
+    let taskDue = "Soon";
+    let taskPriority = "Important";
+    let submitButton = document.querySelector(".btn-submit");
+
+    // WORK ON GETTING CARDS TO ADD TO SCREEN FOR EACH TASK
+
+    submitButton.addEventListener('click', () => {
+        const newTask = new Task(taskTitle, taskDescription, taskDue, taskPriority);
+        
+        myTasks.push(newTask);
+
+        console.log(myTasks);
+    });
+        
+    return myTasks;
+}
+
 /***/ })
 /******/ 	]);
 /************************************************************************/
@@ -552,9 +591,12 @@ var __webpack_exports__ = {};
 (() => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var _create_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(11);
 
 
-let myTasks = [];ff
+
+(0,_create_js__WEBPACK_IMPORTED_MODULE_1__["default"])();    
+
 })();
 
 /******/ })()

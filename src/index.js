@@ -1,3 +1,4 @@
 import './style.css';
+import createTask from './create.js';
 
-let myTasks = [];ff
+createTask();    
