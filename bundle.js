@@ -351,7 +351,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n    margin: 0;\n    font-family: 'Robot', Arial, Helvetica, sans-serif;\n}\n\n#content {\n    height: 100vh;\n    width: 100vw;\n    display: grid;\n    grid-template-rows: 100px 1fr 50px;\n}\n\n/* Header content */\n.header {\n    background-color: #474b5a;\n    display: flex;\n    align-items: center;\n    padding: 40px;\n    gap: 10px;\n    font-size: 42px;\n    color: #e7e8f1;\n}\n\n.header-icon {\n    height: 42px;\n    width: auto;\n    padding-bottom: 2px;\n    filter: invert(97%) sepia(5%) saturate(1089%) hue-rotate(187deg) brightness(100%) contrast(90%);\n}\n\n/* Main content */\n.main {\n    display: grid;\n    grid-template-columns: 275px 1fr;\n}\n\n.sidebar {\n    background-color: #949cb9;\n}\n\n.tasks-display {\n    display: grid;\n    grid-auto-rows: 50px;\n    gap: 25px;\n    padding: 25px;\n    background-color: #e7e8f1;\n}\n\n.tasks-display > button {\n    height: 25px;\n    width: 100px;\n}\n\n.task-card {\n    display: flex;\n    background-color: #fff;\n    width: 500px;\n    height: 30px;\n    border-radius: 30px;\n    align-items: center;\n    justify-content: space-between;\n    padding: 10px;\n}\n\n/* Footer content */\n.footer {\n    display: flex;\n    background-color: #474b5a;\n    align-items: center;\n    justify-content: center;\n    gap: 8px;\n    color: white;\n}\n\na {\n    text-decoration: none;\n    color: #e7e8f1;\n    font-size: 18px;\n}\n\n.github {\n    filter: invert(97%) sepia(5%) saturate(1089%) hue-rotate(187deg) brightness(100%) contrast(90%);\n}\n\n.github:hover {\n    -webkit-transform: scale(1.3);\n    -ms-transform: scale(1.3);\n    transform: scale(1.3);;\n}\n\n/* Pop-up data entry form */\n\n.form-popup {\n    display: none;\n    align-self: center;\n    justify-self: center;\n    border: 3px solid black;\n    z-index: 9;\n    position: fixed;\n  }\n  \n  /* Add styles to the form container */\n  .form-container {\n    display: grid;\n    width: 750px;\n    padding: 10px;\n    background-color: #bac1da;\n  }\n  \n  /* input fields */\n  input[type=text], input[type=number], select {\n    width: 50%;\n    height: 40px;\n    padding: 0 10px 0 10px;\n    margin: 5px 0 22px 0;\n    border: none;\n    background: #e7e8f1;\n    font-size: 16px;\n  }\n\n  select {\n    width: 395px;\n  }\n  \n  \n  /* Set a style for the submit button */\n  .form-container button {\n    background-color: #04AA6D;\n    color: white;\n    padding: 16px 20px;\n    border: none;\n    cursor: pointer;\n    width: 40%;\n    margin-bottom:10px;\n    opacity: 0.8;\n    border-radius: 10px;\n\n  }\n  \n  /* Add a red background color to the cancel button */\n  .form-container .btn-cancel {\n    background-color: red;\n  }\n  \n  /* Add some hover effects to buttons */\n  .form-container button:hover {\n    opacity: 1;\n  }\n  \n  /* positioning for popup buttons */\n  .popup-buttons {\n      display: flex;\n      gap: 40px;\n      margin: 40px;\n      justify-content: center;\n  }", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n    margin: 0;\n    font-family: 'Robot', Arial, Helvetica, sans-serif;\n}\n\n#content {\n    height: 100vh;\n    width: 100vw;\n    display: grid;\n    grid-template-rows: 100px 1fr 50px;\n}\n\n/* Header content */\n.header {\n    background-color: #474b5a;\n    display: flex;\n    align-items: center;\n    padding: 40px;\n    gap: 10px;\n    font-size: 42px;\n    color: #e7e8f1;\n}\n\n.header-icon {\n    height: 42px;\n    width: auto;\n    padding-bottom: 2px;\n    filter: invert(97%) sepia(5%) saturate(1089%) hue-rotate(187deg) brightness(100%) contrast(90%);\n}\n\n/* Main content */\n.main {\n    display: grid;\n    grid-template-columns: 275px 1fr;\n}\n\n.sidebar {\n    background-color: #949cb9;\n}\n\n/* Main content: Task content */\n.tasks-display {\n    display: grid;\n    grid-template-rows: 50px;\n    grid-auto-rows: minmax(auto, 50px);\n    gap: 25px;\n    padding: 25px;\n    background-color: #e7e8f1;\n    overflow: auto;\n}\n\n.tasks-display > button {\n    height: 25px;\n    width: 100px;\n}\n\n.task-card {\n    display: grid;\n    background-color: #fff;\n    grid-template-columns: 4fr 1fr;\n    grid-template-rows: 1fr 4fr;\n    width: 500px;\n    height: 30px;\n    border-radius: 30px;\n    align-items: center;\n    justify-content: space-between;\n    padding: 10px;\n    gap: 10px;\n}\n\n.expand {\n    height: 20px;\n    width: auto;\n}\n\n.expand:hover {\n    cursor: pointer;\n}\n\n.info-container {\n    display: flex;\n    justify-content: end;\n    align-items: center;\n    gap: 15px;\n}\n\n.task-description {\n    align-self: start;\n    justify-self: start;\n}\n\n.task-priority {\n    align-self: end;\n    justify-self: end;\n}\n\n/* Footer content */\n.footer {\n    display: flex;\n    background-color: #474b5a;\n    align-items: center;\n    justify-content: center;\n    gap: 8px;\n    color: white;\n}\n\na {\n    text-decoration: none;\n    color: #e7e8f1;\n    font-size: 18px;\n}\n\n.github {\n    filter: invert(97%) sepia(5%) saturate(1089%) hue-rotate(187deg) brightness(100%) contrast(90%);\n}\n\n.github:hover {\n    -webkit-transform: scale(1.3);\n    -ms-transform: scale(1.3);\n    transform: scale(1.3);;\n}\n\n/* Pop-up data entry form */\n\n.form-popup {\n    display: none;\n    align-self: center;\n    justify-self: center;\n    border: 3px solid black;\n    z-index: 9;\n    position: fixed;\n  }\n  \n  /* Add styles to the form container */\n  .form-container {\n    display: grid;\n    width: 750px;\n    padding: 10px;\n    background-color: #bac1da;\n  }\n  \n  /* input fields */\n  input[type=text], input[type=number], select {\n    width: 50%;\n    height: 40px;\n    padding: 0 10px 0 10px;\n    margin: 5px 0 22px 0;\n    border: none;\n    background: #e7e8f1;\n    font-size: 16px;\n  }\n\n  select {\n    width: 395px;\n  }\n  \n  \n  /* Set a style for the submit button */\n  .form-container button {\n    background-color: #04AA6D;\n    color: white;\n    padding: 16px 20px;\n    border: none;\n    cursor: pointer;\n    width: 40%;\n    margin-bottom:10px;\n    opacity: 0.8;\n    border-radius: 10px;\n\n  }\n  \n  /* Add a red background color to the cancel button */\n  .form-container .btn-cancel {\n    background-color: red;\n  }\n  \n  /* Add some hover effects to buttons */\n  .form-container button:hover {\n    opacity: 1;\n  }\n  \n  /* positioning for popup buttons */\n  .popup-buttons {\n      display: flex;\n      gap: 40px;\n      margin: 40px;\n      justify-content: center;\n  }", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -475,6 +475,12 @@ module.exports = function (cssWithMappingToString) {
 
 /***/ }),
 /* 11 */
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "e40a80aa221c8c69df7d.svg";
+
+/***/ }),
+/* 12 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -589,6 +595,18 @@ function createTask() {
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -605,6 +623,26 @@ function createTask() {
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/nonce */
 /******/ 	(() => {
 /******/ 		__webpack_require__.nc = undefined;
@@ -616,30 +654,75 @@ var __webpack_exports__ = {};
 (() => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _create_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(11);
+/* harmony import */ var _photos_expand_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(11);
+/* harmony import */ var _create_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(12);
+
 
 
 
 let body = document.querySelector('.tasks-display');
 let printButton = document.querySelector('.btn-console');
-let submitButton = document.querySelector('.btn-submit');
-let tasks = (0,_create_js__WEBPACK_IMPORTED_MODULE_1__.createTask)();
+let taskButton = document.querySelector('.btn');
+let tasks = (0,_create_js__WEBPACK_IMPORTED_MODULE_2__.createTask)();
 
 
 printButton.addEventListener('click', () => {
     console.log(tasks);
 });
 
+// Adds task to display
 function addTask() {
     for (let i = (tasks.length - 1); i < tasks.length; i++) {
             let task = document.createElement('div');
+            let expanded = false;
+            let infoContainer = document.createElement('div');
+            infoContainer.classList.add('info-container');
+
+            let taskTitle = document.createElement('div');
+            taskTitle.innerText = `${tasks[i].title}`;
+
+            let taskDescription = document.createElement('div');
+            taskDescription.classList.add('task-description');
+            taskDescription.innerText = `${tasks[i].description}`;
+
+            let taskDue = document.createElement('div');
+            taskDue.innerText = `${tasks[i].dueDate}`;
+
+            let taskPriority = document.createElement('div');
+            taskPriority.classList.add('task-priority');
+            taskPriority.innerText = `${tasks[i].priority}`;
+
+            let expandButton = document.createElement('img');
+            expandButton.src = _photos_expand_svg__WEBPACK_IMPORTED_MODULE_1__;
+            expandButton.classList.add('expand');
+
             task.classList.add('task-card');
-            task.innerText = `${tasks[i].title}, ${tasks[i].description}, ${tasks[i].dueDate}, ${tasks[i].priority}`;
+
             body.appendChild(task);
+            task.appendChild(taskTitle);
+            task.appendChild(infoContainer);
+            infoContainer.appendChild(taskDue);
+            infoContainer.appendChild(expandButton);
+            
+            expandButton.addEventListener('click', () => {
+                if (expanded == false) {
+                    expanded = true;
+                    task.style.height = "125px";
+                    task.style.alignContent = "start";
+                    task.appendChild(taskDescription);
+                    task.appendChild(taskPriority);
+                } else {
+                    expanded = false;
+                    task.style.height = "30px";
+                    task.style.alignContent = "center";
+                    task.removeChild(taskDescription);
+                    task.removeChild(taskPriority);
+                }
+            });
     }
 }
 
-submitButton.addEventListener('click', () => {
+taskButton.addEventListener('click', () => {
     addTask();
 });
 })();
