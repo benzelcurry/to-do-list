@@ -40,12 +40,15 @@ body {
     background-color: #949cb9;
 }
 
+/* Main content: Task content */
 .tasks-display {
     display: grid;
-    grid-auto-rows: 50px;
+    grid-template-rows: 50px;
+    grid-auto-rows: minmax(auto, 50px);
     gap: 25px;
     padding: 25px;
     background-color: #e7e8f1;
+    overflow: auto;
 }
 
 .tasks-display > button {
@@ -54,14 +57,43 @@ body {
 }
 
 .task-card {
-    display: flex;
+    display: grid;
     background-color: #fff;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr 4fr;
     width: 500px;
     height: 30px;
     border-radius: 30px;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
+    gap: 10px;
+}
+
+.expand {
+    height: 20px;
+    width: auto;
+}
+
+.expand:hover {
+    cursor: pointer;
+}
+
+.info-container {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 15px;
+}
+
+.task-description {
+    align-self: start;
+    justify-self: start;
+}
+
+.task-priority {
+    align-self: end;
+    justify-self: end;
 }
 
 /* Footer content */
