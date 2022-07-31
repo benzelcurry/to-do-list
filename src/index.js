@@ -1,7 +1,7 @@
 import './style.css';
 import Expand from './photos/expand.svg';
 import Checkbox from './photos/checkbox.svg';
-import Task, { createTask } from './create.js';
+import { createTask } from './create.js';
 import completeTask from './complete.js';
 import expandTask from './expand.js';
 
@@ -15,8 +15,7 @@ printButton.addEventListener('click', () => {
     console.log(tasks);
 });
 
-// Adds task to display
-function addTask() {
+taskButton.addEventListener('click', () => {
     for (let i = (tasks.length - 1); i < tasks.length; i++) {
             let task = document.createElement('div');
             task.classList.add('task-card');
@@ -57,11 +56,7 @@ function addTask() {
             infoContainer.appendChild(taskDue);
             infoContainer.appendChild(expandButton);
 
-            completeTask();
-            expandTask();
-    }
-}
-
-taskButton.addEventListener('click', () => {
-    addTask();
+            expandTask(expandButton, task, taskDescription, taskPriority);
+            completeTask(checkButton, task);
+    }       
 });

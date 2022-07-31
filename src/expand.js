@@ -1,9 +1,5 @@
-export default function expandTask() {
+export default function expandTask(expandButton, task, taskDescription, taskPriority) {
     let expanded = false;
-    let expandButton = document.querySelector('.expand');
-    let task = document.querySelector('.task-card');
-    let taskDescription = document.querySelector('.task-description');
-    let taskPriority = document.querySelector('.task-priority');
 
     expandButton.addEventListener('click', () => {
         if (expanded == false) {

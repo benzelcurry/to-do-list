@@ -555,9 +555,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ completeTask)
 /* harmony export */ });
-function completeTask() {
+function completeTask(checkButton) {
     let checked = false;
-    let checkButton = document.querySelector('.complete-task');
 
     checkButton.addEventListener('click', () => {
         if (checked == false) {
@@ -578,12 +577,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ expandTask)
 /* harmony export */ });
-function expandTask() {
+function expandTask(expandButton, task, taskDescription, taskPriority) {
     let expanded = false;
-    let expandButton = document.querySelector('.expand');
-    let task = document.querySelector('.task-card');
-    let taskDescription = document.querySelector('.task-description');
-    let taskPriority = document.querySelector('.task-priority');
 
     expandButton.addEventListener('click', () => {
         if (expanded == false) {
@@ -735,8 +730,7 @@ printButton.addEventListener('click', () => {
     console.log(tasks);
 });
 
-// Adds task to display
-function addTask() {
+taskButton.addEventListener('click', () => {
     for (let i = (tasks.length - 1); i < tasks.length; i++) {
             let task = document.createElement('div');
             task.classList.add('task-card');
@@ -777,13 +771,9 @@ function addTask() {
             infoContainer.appendChild(taskDue);
             infoContainer.appendChild(expandButton);
 
-            (0,_complete_js__WEBPACK_IMPORTED_MODULE_4__["default"])();
-            (0,_expand_js__WEBPACK_IMPORTED_MODULE_5__["default"])();
-    }
-}
-
-taskButton.addEventListener('click', () => {
-    addTask();
+            (0,_expand_js__WEBPACK_IMPORTED_MODULE_5__["default"])(expandButton, task, taskDescription, taskPriority);
+            (0,_complete_js__WEBPACK_IMPORTED_MODULE_4__["default"])(checkButton, task);
+    }       
 });
 })();
 

@@ -1,6 +1,5 @@
-export default function completeTask() {
+export default function completeTask(checkButton) {
     let checked = false;
-    let checkButton = document.querySelector('.complete-task');
 
     checkButton.addEventListener('click', () => {
         if (checked == false) {
