@@ -9,9 +9,7 @@ export default class Task {
     }
 }
 
-let myTasks = [];
 let addButton = document.querySelector('.open-form');
-let submitTask = document.querySelector('.btn');
 let cancelButton = document.querySelector('.btn-cancel');
 
 // open + close controls for the task entry popup form

@@ -101,11 +101,13 @@ body {
 }
 
 .task-description {
+    display: none;
     align-self: start;
     justify-self: start;
 }
 
 .task-priority {
+    display: none;
     align-self: end;
     justify-self: end;
 }
