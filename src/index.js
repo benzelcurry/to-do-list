@@ -1,5 +1,6 @@
 import './style.css';
 import Expand from './photos/expand.svg';
+import Checkbox from './photos/checkbox.svg';
 import Task, { createTask } from './create.js';
 
 let body = document.querySelector('.tasks-display');
@@ -19,6 +20,8 @@ function addTask() {
             let expanded = false;
             let infoContainer = document.createElement('div');
             infoContainer.classList.add('info-container');
+            let checkContainer = document.createElement('div');
+            checkContainer.classList.add('check-container');
 
             let taskTitle = document.createElement('div');
             taskTitle.innerText = `${tasks[i].title}`;
@@ -38,11 +41,21 @@ function addTask() {
             expandButton.src = Expand;
             expandButton.classList.add('expand');
 
+            let checkButton = document.createElement('img');
+            checkButton.src = Checkbox;
+            checkButton.classList.add('complete-task');
+
+            checkButton.addEventListener('click', () => {
+                checkButton.style.filter = "invert(40%) sepia(39%) saturate(4105%) hue-rotate(136deg) brightness(99%) contrast(97%)"
+            });
+
             task.classList.add('task-card');
 
             body.appendChild(task);
-            task.appendChild(taskTitle);
+            task.appendChild(checkContainer);
             task.appendChild(infoContainer);
+            checkContainer.appendChild(checkButton);
+            checkContainer.appendChild(taskTitle);
             infoContainer.appendChild(taskDue);
             infoContainer.appendChild(expandButton);
             

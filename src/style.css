@@ -79,11 +79,25 @@ body {
     cursor: pointer;
 }
 
+.complete-task {
+    filter: invert(79%) sepia(8%) saturate(113%) hue-rotate(314deg) brightness(108%) contrast(96%);
+    cursor: pointer;
+}
+
+.check-container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 15px;
+    margin-top: 3px;
+}
+
 .info-container {
     display: flex;
     justify-content: end;
     align-items: center;
     gap: 15px;
+    margin-top: 3px;
 }
 
 .task-description {
