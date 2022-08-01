@@ -79,6 +79,15 @@ body {
     cursor: pointer;
 }
 
+.delete-task {
+    height: 20px;
+    width: auto;
+}
+
+.delete-task:hover {
+    cursor: pointer;
+}
+
 .complete-task {
     filter: invert(79%) sepia(8%) saturate(113%) hue-rotate(314deg) brightness(108%) contrast(96%);
     cursor: pointer;

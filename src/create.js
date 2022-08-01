@@ -1,6 +1,6 @@
 // Create task module
 
-export default class Task {
+class Task {
     constructor(title, description, dueDate, priority) {
         this.title = title;
         this.description = description;
@@ -27,7 +27,7 @@ let form = document.querySelector(".form-container");
 function handleForm(event) { event.preventDefault(); } 
 form.addEventListener('submit', handleForm);
 
-export function createTask() {
+export default function createTask() {
     let myTasks = [];
     let taskTitle = document.querySelector('#task');
     let taskDescription = document.querySelector('#notes');

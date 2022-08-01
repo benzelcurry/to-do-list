@@ -1,9 +1,11 @@
 import './style.css';
 import Expand from './photos/expand.svg';
 import Checkbox from './photos/checkbox.svg';
-import { createTask } from './create.js';
+import Delete from './photos/delete.svg';
+import createTask from './create.js';
 import completeTask from './complete.js';
 import expandTask from './expand.js';
+import deleteTask from './delete.js';
 
 let body = document.querySelector('.tasks-display');
 let printButton = document.querySelector('.btn-console');
@@ -42,6 +44,10 @@ taskButton.addEventListener('click', () => {
             expandButton.src = Expand;
             expandButton.classList.add('expand');
 
+            let deleteButton = document.createElement('img');
+            deleteButton.src = Delete;
+            deleteButton.classList.add('delete-task');
+
             let checkButton = document.createElement('img');
             checkButton.src = Checkbox;
             checkButton.classList.add('complete-task');
@@ -54,9 +60,11 @@ taskButton.addEventListener('click', () => {
             checkContainer.appendChild(checkButton);
             checkContainer.appendChild(taskTitle);
             infoContainer.appendChild(taskDue);
+            infoContainer.appendChild(deleteButton);
             infoContainer.appendChild(expandButton);
 
             expandTask(expandButton, task, taskDescription, taskPriority);
             completeTask(checkButton, task);
+            deleteTask(deleteButton, body, task, tasks, i);
     }       
 });
