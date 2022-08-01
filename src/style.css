@@ -50,6 +50,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
+    border-radius: 10px;
 }
 
 .home:hover {
@@ -72,17 +73,18 @@ body {
 }
 
 .add-button {
-    height: 24px;
+    height: 14px;
     width: auto;
 }
 
 .add-project {
-    font-weight: 550;
+    font-weight: 400;
     font-size: 1rem;
     display: flex;
     gap: 10px;
     padding: 5px;
     align-items: center;
+    border-radius: 10px;
 }
 
 .add-project:hover {
@@ -92,6 +94,27 @@ body {
 
 .add-text {
     padding-top: 3px;
+}
+
+.new-project {
+    font-weight: 400;
+    font-size: 1rem;
+    display: flex;
+    gap: 10px;
+    padding: 5px;
+    align-items: center;
+    border-radius: 10px;
+}
+
+#project-name {
+    width: 190px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #e7e8f1;
+}
+
+#project-name:focus {
+    outline: none;
 }
 
 /* Main content: Task content */

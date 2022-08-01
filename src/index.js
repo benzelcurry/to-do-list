@@ -7,18 +7,20 @@ import completeTask from './complete.js';
 import expandTask from './expand.js';
 import deleteTask from './delete.js';
 import changePriority from './priority.js';
+import createProject from './addProject.js';
 
 let body = document.querySelector('.tasks-display');
 let projects = document.querySelector('.projects');
+let addProjectButton = document.querySelector('.add-project');
 let printButton = document.querySelector('.btn-console');
 let taskButton = document.querySelector('.btn');
 let tasks = createTask();
 
-
-
 printButton.addEventListener('click', () => {
     console.log(tasks);
 });
+
+createProject(projects, addProjectButton);
 
 taskButton.addEventListener('click', () => {
     for (let i = (tasks.length - 1); i < tasks.length; i++) {
