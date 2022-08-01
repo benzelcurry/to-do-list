@@ -6,6 +6,7 @@ import createTask from './create.js';
 import completeTask from './complete.js';
 import expandTask from './expand.js';
 import deleteTask from './delete.js';
+import changePriority from './priority.js';
 
 let body = document.querySelector('.tasks-display');
 let printButton = document.querySelector('.btn-console');
@@ -38,7 +39,7 @@ taskButton.addEventListener('click', () => {
 
             let taskPriority = document.createElement('div');
             taskPriority.classList.add('task-priority');
-            taskPriority.innerText = `${tasks[i].priority}`;
+            taskPriority.innerText = `Priority: ${tasks[i].priority}`;
 
             let expandButton = document.createElement('img');
             expandButton.src = Expand;
@@ -66,5 +67,6 @@ taskButton.addEventListener('click', () => {
             expandTask(expandButton, task, taskDescription, taskPriority);
             completeTask(checkButton, task);
             deleteTask(deleteButton, body, task, tasks, i);
+            changePriority(taskPriority, task, tasks, i);
     }       
 });

@@ -119,6 +119,13 @@ body {
     display: none;
     align-self: end;
     justify-self: end;
+    padding: 5px;
+    font-size: 0.75em;
+}
+
+.task-priority:hover {
+    cursor: pointer;
+    backdrop-filter: brightness(90%);
 }
 
 /* Footer content */
@@ -153,16 +160,18 @@ a {
     display: none;
     align-self: center;
     justify-self: center;
+    border-radius: 40px;
     border: 3px solid black;
     z-index: 9;
     position: fixed;
+    overflow: hidden;
   }
   
   /* Add styles to the form container */
   .form-container {
     display: grid;
     width: 750px;
-    padding: 10px;
+    padding: 25px;
     background-color: #bac1da;
   }
   
