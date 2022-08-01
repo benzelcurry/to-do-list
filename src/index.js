@@ -9,9 +9,11 @@ import deleteTask from './delete.js';
 import changePriority from './priority.js';
 
 let body = document.querySelector('.tasks-display');
+let projects = document.querySelector('.projects');
 let printButton = document.querySelector('.btn-console');
 let taskButton = document.querySelector('.btn');
 let tasks = createTask();
+
 
 
 printButton.addEventListener('click', () => {

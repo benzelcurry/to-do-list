@@ -38,6 +38,60 @@ body {
 
 .sidebar {
     background-color: #949cb9;
+    display: grid;
+    grid-auto-rows: 40px;
+    gap: 50px;
+    padding: 50px 30px 0 30px;
+}
+
+.home {
+    align-self: start;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.home:hover {
+    cursor: pointer;
+    backdrop-filter: brightness(90%);
+}
+
+.home-icon {
+    height: 32px;
+    width: auto;
+}
+
+.projects {
+    display: grid;
+    padding: 5px;
+    font-size: 32px;
+    font-weight: bold;
+    grid-auto-rows: 40px;
+    gap: 10px;
+}
+
+.add-button {
+    height: 24px;
+    width: auto;
+}
+
+.add-project {
+    font-weight: 550;
+    font-size: 1rem;
+    display: flex;
+    gap: 10px;
+    padding: 5px;
+    align-items: center;
+}
+
+.add-project:hover {
+    cursor: pointer;
+    backdrop-filter: brightness(90%);
+}
+
+.add-text {
+    padding-top: 3px;
 }
 
 /* Main content: Task content */
