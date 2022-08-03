@@ -484,11 +484,12 @@ __webpack_require__.r(__webpack_exports__);
 // Create task module
 
 class Task {
-    constructor(title, description, dueDate, priority) {
+    constructor(title, description, dueDate, priority, project) {
         this.title = title;
         this.description = description;
         this.dueDate = dueDate;
         this.priority = priority;
+        this.project = project;
     }
 }
 
@@ -520,7 +521,7 @@ function createTask() {
 
     // New tasks get pushed to array
     submitButton.addEventListener('click', () => {
-        const newTask = new Task(taskTitle.value, taskDescription.value, taskDue.value, taskPriority.value);
+        const newTask = new Task(taskTitle.value, taskDescription.value, taskDue.value, taskPriority.value, CURRENTPAGE);
         
         myTasks.push(newTask);
         taskTitle.value = "";
@@ -541,11 +542,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ createProject)
 /* harmony export */ });
-/* harmony import */ var _drawTask_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(13);
+/* harmony import */ var _setProject__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(22);
+/* harmony import */ var _create_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(11);
+
 
 
 // Creates new projects for organizing tasks
-function createProject(body, projects, addProjectButton) {
+function createProject(body, projects, addProjectButton, currentPage) {
     addProjectButton.addEventListener('click', () => {
         let newProject = document.createElement('div');
         let projectName = document.createElement('input');
@@ -568,6 +571,7 @@ function createProject(body, projects, addProjectButton) {
         
         newProject.addEventListener('click', () => {
             body.innerHTML = '';
+            CURRENTPAGE = newProject.innerText;
         });
     });
 }
@@ -846,6 +850,20 @@ function drawAllTasks(body, tasks) {
     }
 }
 
+/***/ }),
+/* 22 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ setProject)
+/* harmony export */ });
+function setProject(value) {
+    let project = [];
+
+    return project;
+}
+
 /***/ })
 /******/ 	]);
 /************************************************************************/
@@ -961,6 +979,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _addProject_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(12);
 /* harmony import */ var _drawTask_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(13);
 /* harmony import */ var _drawAllTasks_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(21);
+/* harmony import */ var _setProject_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(22);
+
 
 
 
@@ -974,15 +994,18 @@ let addProjectButton = document.querySelector('.add-project');
 let printButton = document.querySelector('.btn-console');
 let taskButton = document.querySelector('.btn');
 let homeButton = document.querySelector('.home');
-let tasks = (0,_create_js__WEBPACK_IMPORTED_MODULE_1__["default"])();
+window.CURRENTPAGE = "home";
+let tasks = (0,_create_js__WEBPACK_IMPORTED_MODULE_1__["default"])(CURRENTPAGE);
 
 homeButton.addEventListener('click', () => {
+    CURRENTPAGE = "home";
     body.style.display = "grid";
     body.style.gridAutoRows = "minmax(auto, 50px)";
     (0,_drawAllTasks_js__WEBPACK_IMPORTED_MODULE_4__["default"])(body, tasks);
 });
 
 printButton.addEventListener('click', () => {
+    console.log(CURRENTPAGE);
     console.log(tasks);
 });
 

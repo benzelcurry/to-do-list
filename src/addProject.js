@@ -1,7 +1,8 @@
-import addTask from './drawTask.js';
+import setProject from "./setProject";
+import createTask from "./create.js";
 
 // Creates new projects for organizing tasks
-export default function createProject(body, projects, addProjectButton) {
+export default function createProject(body, projects, addProjectButton, currentPage) {
     addProjectButton.addEventListener('click', () => {
         let newProject = document.createElement('div');
         let projectName = document.createElement('input');
@@ -24,6 +25,7 @@ export default function createProject(body, projects, addProjectButton) {
         
         newProject.addEventListener('click', () => {
             body.innerHTML = '';
+            CURRENTPAGE = newProject.innerText;
         });
     });
 }

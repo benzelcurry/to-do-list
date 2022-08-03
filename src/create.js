@@ -1,11 +1,12 @@
 // Create task module
 
 class Task {
-    constructor(title, description, dueDate, priority) {
+    constructor(title, description, dueDate, priority, project) {
         this.title = title;
         this.description = description;
         this.dueDate = dueDate;
         this.priority = priority;
+        this.project = project;
     }
 }
 
@@ -37,7 +38,7 @@ export default function createTask() {
 
     // New tasks get pushed to array
     submitButton.addEventListener('click', () => {
-        const newTask = new Task(taskTitle.value, taskDescription.value, taskDue.value, taskPriority.value);
+        const newTask = new Task(taskTitle.value, taskDescription.value, taskDue.value, taskPriority.value, CURRENTPAGE);
         
         myTasks.push(newTask);
         taskTitle.value = "";
