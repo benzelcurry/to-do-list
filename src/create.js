@@ -35,8 +35,7 @@ export default function createTask() {
     let taskPriority = document.querySelector('#priority');
     let submitButton = document.querySelector(".btn");
 
-    // WORK ON GETTING CARDS TO ADD TO SCREEN FOR EACH TASK
-
+    // New tasks get pushed to array
     submitButton.addEventListener('click', () => {
         const newTask = new Task(taskTitle.value, taskDescription.value, taskDue.value, taskPriority.value);
         

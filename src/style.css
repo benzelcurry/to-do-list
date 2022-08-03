@@ -106,6 +106,11 @@ body {
     border-radius: 10px;
 }
 
+.new-project:hover {
+    cursor: pointer;
+    backdrop-filter: brightness(90%);
+}
+
 #project-name {
     width: 190px;
     height: 40px;
@@ -121,7 +126,6 @@ body {
 .tasks-display {
     display: grid;
     grid-template-rows: 50px;
-    grid-auto-rows: minmax(auto, 50px);
     gap: 25px;
     padding: 25px;
     background-color: #e7e8f1;
@@ -131,6 +135,15 @@ body {
 .tasks-display > button {
     height: 25px;
     width: 100px;
+}
+
+.tasks-area {
+    display: grid;
+    grid-auto-rows: minmax(auto, 50px);
+    gap: 25px;
+    padding: 25px;
+    background-color: #e7e8f1;
+    overflow: auto;
 }
 
 .task-card {
