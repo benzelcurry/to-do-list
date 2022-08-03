@@ -351,7 +351,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n    margin: 0;\n    font-family: 'Robot', Arial, Helvetica, sans-serif;\n}\n\n#content {\n    height: 100vh;\n    width: 100vw;\n    display: grid;\n    grid-template-rows: 100px 1fr 50px;\n}\n\n/* Header content */\n.header {\n    background-color: #474b5a;\n    display: flex;\n    align-items: center;\n    padding: 40px;\n    gap: 10px;\n    font-size: 42px;\n    color: #e7e8f1;\n}\n\n.header-icon {\n    height: 42px;\n    width: auto;\n    padding-bottom: 2px;\n    filter: invert(97%) sepia(5%) saturate(1089%) hue-rotate(187deg) brightness(100%) contrast(90%);\n}\n\n/* Main content */\n.main {\n    display: grid;\n    grid-template-columns: 275px 1fr;\n}\n\n.sidebar {\n    background-color: #949cb9;\n    display: grid;\n    grid-auto-rows: 40px;\n    gap: 50px;\n    padding: 50px 30px 0 30px;\n}\n\n.home {\n    align-self: start;\n    padding: 5px;\n    display: flex;\n    align-items: center;\n    gap: 10px;\n    border-radius: 10px;\n}\n\n.home:hover {\n    cursor: pointer;\n    backdrop-filter: brightness(90%);\n}\n\n.home-icon {\n    height: 32px;\n    width: auto;\n}\n\n.projects {\n    display: grid;\n    padding: 5px;\n    font-size: 32px;\n    font-weight: bold;\n    grid-auto-rows: 40px;\n    gap: 10px;\n}\n\n.add-button {\n    height: 14px;\n    width: auto;\n}\n\n.add-project {\n    font-weight: 400;\n    font-size: 1rem;\n    display: flex;\n    gap: 10px;\n    padding: 5px;\n    align-items: center;\n    border-radius: 10px;\n}\n\n.add-project:hover {\n    cursor: pointer;\n    backdrop-filter: brightness(90%);\n}\n\n.add-text {\n    padding-top: 3px;\n}\n\n.new-project {\n    font-weight: 400;\n    font-size: 1rem;\n    display: flex;\n    gap: 10px;\n    padding: 5px;\n    align-items: center;\n    border-radius: 10px;\n}\n\n#project-name {\n    width: 190px;\n    height: 40px;\n    border-radius: 10px;\n    background-color: #e7e8f1;\n}\n\n#project-name:focus {\n    outline: none;\n}\n\n/* Main content: Task content */\n.tasks-display {\n    display: grid;\n    grid-template-rows: 50px;\n    grid-auto-rows: minmax(auto, 50px);\n    gap: 25px;\n    padding: 25px;\n    background-color: #e7e8f1;\n    overflow: auto;\n}\n\n.tasks-display > button {\n    height: 25px;\n    width: 100px;\n}\n\n.task-card {\n    display: grid;\n    background-color: #fff;\n    grid-template-columns: 4fr 1fr;\n    grid-template-rows: 1fr 4fr;\n    width: 500px;\n    height: 30px;\n    border-radius: 30px;\n    align-items: center;\n    justify-content: space-between;\n    padding: 10px;\n    gap: 10px;\n}\n\n.expand {\n    height: 20px;\n    width: auto;\n}\n\n.expand:hover {\n    cursor: pointer;\n}\n\n.delete-task {\n    height: 20px;\n    width: auto;\n}\n\n.delete-task:hover {\n    cursor: pointer;\n}\n\n.complete-task {\n    filter: invert(79%) sepia(8%) saturate(113%) hue-rotate(314deg) brightness(108%) contrast(96%);\n    cursor: pointer;\n}\n\n.check-container {\n    display: flex;\n    justify-content: start;\n    align-items: center;\n    gap: 15px;\n    margin-top: 3px;\n}\n\n.info-container {\n    display: flex;\n    justify-content: end;\n    align-items: center;\n    gap: 15px;\n    margin-top: 3px;\n}\n\n.task-description {\n    display: none;\n    align-self: start;\n    justify-self: start;\n}\n\n.task-priority {\n    display: none;\n    align-self: end;\n    justify-self: end;\n    padding: 5px;\n    font-size: 0.75em;\n}\n\n.task-priority:hover {\n    cursor: pointer;\n    backdrop-filter: brightness(90%);\n}\n\n/* Footer content */\n.footer {\n    display: flex;\n    background-color: #474b5a;\n    align-items: center;\n    justify-content: center;\n    gap: 8px;\n    color: white;\n}\n\na {\n    text-decoration: none;\n    color: #e7e8f1;\n    font-size: 18px;\n}\n\n.github {\n    filter: invert(97%) sepia(5%) saturate(1089%) hue-rotate(187deg) brightness(100%) contrast(90%);\n}\n\n.github:hover {\n    -webkit-transform: scale(1.3);\n    -ms-transform: scale(1.3);\n    transform: scale(1.3);;\n}\n\n/* Pop-up data entry form */\n\n.form-popup {\n    display: none;\n    align-self: center;\n    justify-self: center;\n    border-radius: 40px;\n    border: 3px solid black;\n    z-index: 9;\n    position: fixed;\n    overflow: hidden;\n  }\n  \n  /* Add styles to the form container */\n  .form-container {\n    display: grid;\n    width: 750px;\n    padding: 25px;\n    background-color: #bac1da;\n  }\n  \n  /* input fields */\n  input[type=text], input[type=number], select {\n    width: 50%;\n    height: 40px;\n    padding: 0 10px 0 10px;\n    margin: 5px 0 22px 0;\n    border: none;\n    background: #e7e8f1;\n    font-size: 16px;\n  }\n\n  select {\n    width: 395px;\n  }\n  \n  \n  /* Set a style for the submit button */\n  .form-container button {\n    background-color: #04AA6D;\n    color: white;\n    padding: 16px 20px;\n    border: none;\n    cursor: pointer;\n    width: 40%;\n    margin-bottom:10px;\n    opacity: 0.8;\n    border-radius: 10px;\n\n  }\n  \n  /* Add a red background color to the cancel button */\n  .form-container .btn-cancel {\n    background-color: red;\n  }\n  \n  /* Add some hover effects to buttons */\n  .form-container button:hover {\n    opacity: 1;\n  }\n  \n  /* positioning for popup buttons */\n  .popup-buttons {\n      display: flex;\n      gap: 40px;\n      margin: 40px;\n      justify-content: center;\n  }", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n    margin: 0;\n    font-family: 'Robot', Arial, Helvetica, sans-serif;\n}\n\n#content {\n    height: 100vh;\n    width: 100vw;\n    display: grid;\n    grid-template-rows: 100px 1fr 50px;\n}\n\n/* Header content */\n.header {\n    background-color: #474b5a;\n    display: flex;\n    align-items: center;\n    padding: 40px;\n    gap: 10px;\n    font-size: 42px;\n    color: #e7e8f1;\n}\n\n.header-icon {\n    height: 42px;\n    width: auto;\n    padding-bottom: 2px;\n    filter: invert(97%) sepia(5%) saturate(1089%) hue-rotate(187deg) brightness(100%) contrast(90%);\n}\n\n/* Main content */\n.main {\n    display: grid;\n    grid-template-columns: 275px 1fr;\n}\n\n.sidebar {\n    background-color: #949cb9;\n    display: grid;\n    grid-auto-rows: 40px;\n    gap: 50px;\n    padding: 50px 30px 0 30px;\n}\n\n.home {\n    align-self: start;\n    padding: 5px;\n    display: flex;\n    align-items: center;\n    gap: 10px;\n    border-radius: 10px;\n}\n\n.home:hover {\n    cursor: pointer;\n    backdrop-filter: brightness(90%);\n}\n\n.home-icon {\n    height: 32px;\n    width: auto;\n}\n\n.projects {\n    display: grid;\n    padding: 5px;\n    font-size: 32px;\n    font-weight: bold;\n    grid-auto-rows: 40px;\n    gap: 10px;\n}\n\n.add-button {\n    height: 14px;\n    width: auto;\n}\n\n.add-project {\n    font-weight: 400;\n    font-size: 1rem;\n    display: flex;\n    gap: 10px;\n    padding: 5px;\n    align-items: center;\n    border-radius: 10px;\n}\n\n.add-project:hover {\n    cursor: pointer;\n    backdrop-filter: brightness(90%);\n}\n\n.add-text {\n    padding-top: 3px;\n}\n\n.new-project {\n    font-weight: 400;\n    font-size: 1rem;\n    display: flex;\n    gap: 10px;\n    padding: 5px;\n    align-items: center;\n    border-radius: 10px;\n}\n\n.new-project:hover {\n    cursor: pointer;\n    backdrop-filter: brightness(90%);\n}\n\n#project-name {\n    width: 190px;\n    height: 40px;\n    border-radius: 10px;\n    background-color: #e7e8f1;\n}\n\n#project-name:focus {\n    outline: none;\n}\n\n/* Main content: Task content */\n.tasks-display {\n    display: grid;\n    grid-template-rows: 50px;\n    gap: 25px;\n    padding: 25px;\n    background-color: #e7e8f1;\n    overflow: auto;\n}\n\n.tasks-display > button {\n    height: 25px;\n    width: 100px;\n}\n\n.tasks-area {\n    display: grid;\n    grid-auto-rows: minmax(auto, 50px);\n    gap: 25px;\n    padding: 25px;\n    background-color: #e7e8f1;\n    overflow: auto;\n}\n\n.task-card {\n    display: grid;\n    background-color: #fff;\n    grid-template-columns: 4fr 1fr;\n    grid-template-rows: 1fr 4fr;\n    width: 500px;\n    height: 30px;\n    border-radius: 30px;\n    align-items: center;\n    justify-content: space-between;\n    padding: 10px;\n    gap: 10px;\n}\n\n.expand {\n    height: 20px;\n    width: auto;\n}\n\n.expand:hover {\n    cursor: pointer;\n}\n\n.delete-task {\n    height: 20px;\n    width: auto;\n}\n\n.delete-task:hover {\n    cursor: pointer;\n}\n\n.complete-task {\n    filter: invert(79%) sepia(8%) saturate(113%) hue-rotate(314deg) brightness(108%) contrast(96%);\n    cursor: pointer;\n}\n\n.check-container {\n    display: flex;\n    justify-content: start;\n    align-items: center;\n    gap: 15px;\n    margin-top: 3px;\n}\n\n.info-container {\n    display: flex;\n    justify-content: end;\n    align-items: center;\n    gap: 15px;\n    margin-top: 3px;\n}\n\n.task-description {\n    display: none;\n    align-self: start;\n    justify-self: start;\n}\n\n.task-priority {\n    display: none;\n    align-self: end;\n    justify-self: end;\n    padding: 5px;\n    font-size: 0.75em;\n}\n\n.task-priority:hover {\n    cursor: pointer;\n    backdrop-filter: brightness(90%);\n}\n\n/* Footer content */\n.footer {\n    display: flex;\n    background-color: #474b5a;\n    align-items: center;\n    justify-content: center;\n    gap: 8px;\n    color: white;\n}\n\na {\n    text-decoration: none;\n    color: #e7e8f1;\n    font-size: 18px;\n}\n\n.github {\n    filter: invert(97%) sepia(5%) saturate(1089%) hue-rotate(187deg) brightness(100%) contrast(90%);\n}\n\n.github:hover {\n    -webkit-transform: scale(1.3);\n    -ms-transform: scale(1.3);\n    transform: scale(1.3);;\n}\n\n/* Pop-up data entry form */\n\n.form-popup {\n    display: none;\n    align-self: center;\n    justify-self: center;\n    border-radius: 40px;\n    border: 3px solid black;\n    z-index: 9;\n    position: fixed;\n    overflow: hidden;\n  }\n  \n  /* Add styles to the form container */\n  .form-container {\n    display: grid;\n    width: 750px;\n    padding: 25px;\n    background-color: #bac1da;\n  }\n  \n  /* input fields */\n  input[type=text], input[type=number], select {\n    width: 50%;\n    height: 40px;\n    padding: 0 10px 0 10px;\n    margin: 5px 0 22px 0;\n    border: none;\n    background: #e7e8f1;\n    font-size: 16px;\n  }\n\n  select {\n    width: 395px;\n  }\n  \n  \n  /* Set a style for the submit button */\n  .form-container button {\n    background-color: #04AA6D;\n    color: white;\n    padding: 16px 20px;\n    border: none;\n    cursor: pointer;\n    width: 40%;\n    margin-bottom:10px;\n    opacity: 0.8;\n    border-radius: 10px;\n\n  }\n  \n  /* Add a red background color to the cancel button */\n  .form-container .btn-cancel {\n    background-color: red;\n  }\n  \n  /* Add some hover effects to buttons */\n  .form-container button:hover {\n    opacity: 1;\n  }\n  \n  /* positioning for popup buttons */\n  .popup-buttons {\n      display: flex;\n      gap: 40px;\n      margin: 40px;\n      justify-content: center;\n  }", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -475,24 +475,6 @@ module.exports = function (cssWithMappingToString) {
 
 /***/ }),
 /* 11 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "e40a80aa221c8c69df7d.svg";
-
-/***/ }),
-/* 12 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "80bbc46b28eab201ebb9.svg";
-
-/***/ }),
-/* 13 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "7747e0f66efb7f7a1be6.svg";
-
-/***/ }),
-/* 14 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -536,8 +518,7 @@ function createTask() {
     let taskPriority = document.querySelector('#priority');
     let submitButton = document.querySelector(".btn");
 
-    // WORK ON GETTING CARDS TO ADD TO SCREEN FOR EACH TASK
-
+    // New tasks get pushed to array
     submitButton.addEventListener('click', () => {
         const newTask = new Task(taskTitle.value, taskDescription.value, taskDue.value, taskPriority.value);
         
@@ -553,7 +534,122 @@ function createTask() {
 }
 
 /***/ }),
-/* 15 */
+/* 12 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ createProject)
+/* harmony export */ });
+/* harmony import */ var _drawTask_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(13);
+
+
+// Creates new projects for organizing tasks
+function createProject(body, projects, addProjectButton) {
+    addProjectButton.addEventListener('click', () => {
+        let newProject = document.createElement('div');
+        let projectName = document.createElement('input');
+        projectName.type = "text";
+        projectName.id = "project-name";
+        projectName.name = "project-name";
+        projectName.maxLength = "30";
+        newProject.classList.add('new-project');
+        projects.insertBefore(projectName, addProjectButton);
+        projectName.focus();
+        if (projectName == document.activeElement) {
+            projectName.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    newProject.innerText = projectName.value;
+                    projects.removeChild(projectName);
+                    projects.insertBefore(newProject, addProjectButton);
+                }
+            });
+        }
+        
+        newProject.addEventListener('click', () => {
+            body.innerHTML = '';
+        });
+    });
+}
+
+/***/ }),
+/* 13 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ addTask)
+/* harmony export */ });
+/* harmony import */ var _complete_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(14);
+/* harmony import */ var _expand_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(15);
+/* harmony import */ var _delete_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(16);
+/* harmony import */ var _priority_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(17);
+/* harmony import */ var _photos_expand_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(18);
+/* harmony import */ var _photos_checkbox_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(19);
+/* harmony import */ var _photos_delete_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(20);
+
+
+
+
+
+
+
+
+function addTask(body, tasks) {
+    for (let i = (tasks.length - 1); i < tasks.length; i++) {
+        let task = document.createElement('div');
+        task.classList.add('task-card');
+        let infoContainer = document.createElement('div');
+        infoContainer.classList.add('info-container');
+        let checkContainer = document.createElement('div');
+        checkContainer.classList.add('check-container');
+
+        let taskTitle = document.createElement('div');
+        taskTitle.innerText = `${tasks[i].title}`;
+
+        let taskDescription = document.createElement('div');
+        taskDescription.classList.add('task-description');
+        taskDescription.innerText = `${tasks[i].description}`;
+
+        let taskDue = document.createElement('div');
+        taskDue.innerText = `${tasks[i].dueDate}`;
+
+        let taskPriority = document.createElement('div');
+        taskPriority.classList.add('task-priority');
+        taskPriority.innerText = `Priority: ${tasks[i].priority}`;
+
+        let expandButton = document.createElement('img');
+        expandButton.src = _photos_expand_svg__WEBPACK_IMPORTED_MODULE_4__;
+        expandButton.classList.add('expand');
+
+        let deleteButton = document.createElement('img');
+        deleteButton.src = _photos_delete_svg__WEBPACK_IMPORTED_MODULE_6__;
+        deleteButton.classList.add('delete-task');
+
+        let checkButton = document.createElement('img');
+        checkButton.src = _photos_checkbox_svg__WEBPACK_IMPORTED_MODULE_5__;
+        checkButton.classList.add('complete-task');
+
+        body.appendChild(task);
+        task.appendChild(checkContainer);
+        task.appendChild(infoContainer);
+        task.appendChild(taskDescription);
+        task.appendChild(taskPriority);
+        checkContainer.appendChild(checkButton);
+        checkContainer.appendChild(taskTitle);
+        infoContainer.appendChild(taskDue);
+        infoContainer.appendChild(deleteButton);
+        infoContainer.appendChild(expandButton);
+
+        (0,_expand_js__WEBPACK_IMPORTED_MODULE_1__["default"])(expandButton, task, taskDescription, taskPriority);
+        (0,_complete_js__WEBPACK_IMPORTED_MODULE_0__["default"])(checkButton, task);
+        (0,_delete_js__WEBPACK_IMPORTED_MODULE_2__["default"])(deleteButton, body, task, tasks, i);
+        (0,_priority_js__WEBPACK_IMPORTED_MODULE_3__["default"])(taskPriority, task, tasks, i);
+    }
+};
+
+/***/ }),
+/* 14 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -575,7 +671,7 @@ function completeTask(checkButton) {
 }
 
 /***/ }),
-/* 16 */
+/* 15 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -603,7 +699,7 @@ function expandTask(expandButton, task, taskDescription, taskPriority) {
 }
 
 /***/ }),
-/* 17 */
+/* 16 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -618,7 +714,7 @@ function deleteTask(deleteButton, body, task, tasks, i) {
 }
 
 /***/ }),
-/* 18 */
+/* 17 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -656,35 +752,98 @@ function changePriority(taskPriority, task, tasks, i) {
 }
 
 /***/ }),
+/* 18 */
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "e40a80aa221c8c69df7d.svg";
+
+/***/ }),
 /* 19 */
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "80bbc46b28eab201ebb9.svg";
+
+/***/ }),
+/* 20 */
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "7747e0f66efb7f7a1be6.svg";
+
+/***/ }),
+/* 21 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ createProject)
+/* harmony export */   "default": () => (/* binding */ drawAllTasks)
 /* harmony export */ });
-// Creates new projects for organizing tasks
-function createProject(projects, addProjectButton) {
-    addProjectButton.addEventListener('click', () => {
-        let newProject = document.createElement('div');
-        let projectName = document.createElement('input');
-        projectName.type = "text";
-        projectName.id = "project-name";
-        projectName.name = "project-name";
-        projectName.maxLength = "30";
-        newProject.classList.add('new-project');
-        projects.insertBefore(projectName, addProjectButton);
-        projectName.focus();
-        if (projectName == document.activeElement) {
-            projectName.addEventListener('keypress', (e) => {
-                if (e.key === 'Enter') {
-                    newProject.innerText = projectName.value;
-                    projects.removeChild(projectName);
-                    projects.insertBefore(newProject, addProjectButton);
-                }    
-            });
-        }
-    });
+/* harmony import */ var _complete_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(14);
+/* harmony import */ var _expand_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(15);
+/* harmony import */ var _delete_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(16);
+/* harmony import */ var _priority_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(17);
+/* harmony import */ var _photos_expand_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(18);
+/* harmony import */ var _photos_checkbox_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(19);
+/* harmony import */ var _photos_delete_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(20);
+
+
+
+
+
+
+
+
+function drawAllTasks(body, tasks) {
+    for (let i = 0; i < tasks.length; i++) {
+        console.log(tasks[i]);
+        let task = document.createElement('div');
+        task.classList.add('task-card');
+        let infoContainer = document.createElement('div');
+        infoContainer.classList.add('info-container');
+        let checkContainer = document.createElement('div');
+        checkContainer.classList.add('check-container');
+
+        let taskTitle = document.createElement('div');
+        taskTitle.innerText = `${tasks[i].title}`;
+
+        let taskDescription = document.createElement('div');
+        taskDescription.classList.add('task-description');
+        taskDescription.innerText = `${tasks[i].description}`;
+
+        let taskDue = document.createElement('div');
+        taskDue.innerText = `${tasks[i].dueDate}`;
+
+        let taskPriority = document.createElement('div');
+        taskPriority.classList.add('task-priority');
+        taskPriority.innerText = `Priority: ${tasks[i].priority}`;
+
+        let expandButton = document.createElement('img');
+        expandButton.src = _photos_expand_svg__WEBPACK_IMPORTED_MODULE_4__;
+        expandButton.classList.add('expand');
+
+        let deleteButton = document.createElement('img');
+        deleteButton.src = _photos_delete_svg__WEBPACK_IMPORTED_MODULE_6__;
+        deleteButton.classList.add('delete-task');
+
+        let checkButton = document.createElement('img');
+        checkButton.src = _photos_checkbox_svg__WEBPACK_IMPORTED_MODULE_5__;
+        checkButton.classList.add('complete-task');
+
+        body.appendChild(task);
+        task.appendChild(checkContainer);
+        task.appendChild(infoContainer);
+        task.appendChild(taskDescription);
+        task.appendChild(taskPriority);
+        checkContainer.appendChild(checkButton);
+        checkContainer.appendChild(taskTitle);
+        infoContainer.appendChild(taskDue);
+        infoContainer.appendChild(deleteButton);
+        infoContainer.appendChild(expandButton);
+
+        (0,_expand_js__WEBPACK_IMPORTED_MODULE_1__["default"])(expandButton, task, taskDescription, taskPriority);
+        (0,_complete_js__WEBPACK_IMPORTED_MODULE_0__["default"])(checkButton, task);
+        (0,_delete_js__WEBPACK_IMPORTED_MODULE_2__["default"])(deleteButton, body, task, tasks, i);
+        (0,_priority_js__WEBPACK_IMPORTED_MODULE_3__["default"])(taskPriority, task, tasks, i);
+    }
 }
 
 /***/ })
@@ -798,90 +957,39 @@ var __webpack_exports__ = {};
 (() => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _photos_expand_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(11);
-/* harmony import */ var _photos_checkbox_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(12);
-/* harmony import */ var _photos_delete_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(13);
-/* harmony import */ var _create_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(14);
-/* harmony import */ var _complete_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(15);
-/* harmony import */ var _expand_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(16);
-/* harmony import */ var _delete_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(17);
-/* harmony import */ var _priority_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(18);
-/* harmony import */ var _addProject_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(19);
+/* harmony import */ var _create_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(11);
+/* harmony import */ var _addProject_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(12);
+/* harmony import */ var _drawTask_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(13);
+/* harmony import */ var _drawAllTasks_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(21);
 
 
 
 
 
 
-
-
-
-
-
-let body = document.querySelector('.tasks-display');
+let mainContent = document.querySelector('.tasks-display');
+let body = document.querySelector('.tasks-area');
 let projects = document.querySelector('.projects');
 let addProjectButton = document.querySelector('.add-project');
 let printButton = document.querySelector('.btn-console');
 let taskButton = document.querySelector('.btn');
-let tasks = (0,_create_js__WEBPACK_IMPORTED_MODULE_4__["default"])();
+let homeButton = document.querySelector('.home');
+let tasks = (0,_create_js__WEBPACK_IMPORTED_MODULE_1__["default"])();
+
+homeButton.addEventListener('click', () => {
+    body.style.display = "grid";
+    body.style.gridAutoRows = "minmax(auto, 50px)";
+    (0,_drawAllTasks_js__WEBPACK_IMPORTED_MODULE_4__["default"])(body, tasks);
+});
 
 printButton.addEventListener('click', () => {
     console.log(tasks);
 });
 
-(0,_addProject_js__WEBPACK_IMPORTED_MODULE_9__["default"])(projects, addProjectButton);
+(0,_addProject_js__WEBPACK_IMPORTED_MODULE_2__["default"])(body, projects, addProjectButton);
 
-taskButton.addEventListener('click', () => {
-    for (let i = (tasks.length - 1); i < tasks.length; i++) {
-            let task = document.createElement('div');
-            task.classList.add('task-card');
-            let infoContainer = document.createElement('div');
-            infoContainer.classList.add('info-container');
-            let checkContainer = document.createElement('div');
-            checkContainer.classList.add('check-container');
-
-            let taskTitle = document.createElement('div');
-            taskTitle.innerText = `${tasks[i].title}`;
-
-            let taskDescription = document.createElement('div');
-            taskDescription.classList.add('task-description');
-            taskDescription.innerText = `${tasks[i].description}`;
-
-            let taskDue = document.createElement('div');
-            taskDue.innerText = `${tasks[i].dueDate}`;
-
-            let taskPriority = document.createElement('div');
-            taskPriority.classList.add('task-priority');
-            taskPriority.innerText = `Priority: ${tasks[i].priority}`;
-
-            let expandButton = document.createElement('img');
-            expandButton.src = _photos_expand_svg__WEBPACK_IMPORTED_MODULE_1__;
-            expandButton.classList.add('expand');
-
-            let deleteButton = document.createElement('img');
-            deleteButton.src = _photos_delete_svg__WEBPACK_IMPORTED_MODULE_3__;
-            deleteButton.classList.add('delete-task');
-
-            let checkButton = document.createElement('img');
-            checkButton.src = _photos_checkbox_svg__WEBPACK_IMPORTED_MODULE_2__;
-            checkButton.classList.add('complete-task');
-
-            body.appendChild(task);
-            task.appendChild(checkContainer);
-            task.appendChild(infoContainer);
-            task.appendChild(taskDescription);
-            task.appendChild(taskPriority);
-            checkContainer.appendChild(checkButton);
-            checkContainer.appendChild(taskTitle);
-            infoContainer.appendChild(taskDue);
-            infoContainer.appendChild(deleteButton);
-            infoContainer.appendChild(expandButton);
-
-            (0,_expand_js__WEBPACK_IMPORTED_MODULE_6__["default"])(expandButton, task, taskDescription, taskPriority);
-            (0,_complete_js__WEBPACK_IMPORTED_MODULE_5__["default"])(checkButton, task);
-            (0,_delete_js__WEBPACK_IMPORTED_MODULE_7__["default"])(deleteButton, body, task, tasks, i);
-            (0,_priority_js__WEBPACK_IMPORTED_MODULE_8__["default"])(taskPriority, task, tasks, i);
-    }       
+taskButton.addEventListener('click', () => {  
+    (0,_drawTask_js__WEBPACK_IMPORTED_MODULE_3__["default"])(body, tasks);
 });
 })();
 
