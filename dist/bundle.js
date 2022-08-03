@@ -542,13 +542,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ createProject)
 /* harmony export */ });
-/* harmony import */ var _setProject__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(22);
-/* harmony import */ var _create_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(11);
+/* harmony import */ var _create_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(11);
+/* harmony import */ var _drawAllTasks_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(21);
+
 
 
 
 // Creates new projects for organizing tasks
-function createProject(body, projects, addProjectButton, currentPage) {
+function createProject(body, tasks, projects, addProjectButton, currentPage) {
     addProjectButton.addEventListener('click', () => {
         let newProject = document.createElement('div');
         let projectName = document.createElement('input');
@@ -572,6 +573,7 @@ function createProject(body, projects, addProjectButton, currentPage) {
         newProject.addEventListener('click', () => {
             body.innerHTML = '';
             CURRENTPAGE = newProject.innerText;
+            (0,_drawAllTasks_js__WEBPACK_IMPORTED_MODULE_1__["default"])(body, tasks, newProject.innerText)
         });
     });
 }
@@ -796,72 +798,59 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function drawAllTasks(body, tasks) {
+function drawAllTasks(body, tasks, button) {
     for (let i = 0; i < tasks.length; i++) {
-        console.log(tasks[i]);
-        let task = document.createElement('div');
-        task.classList.add('task-card');
-        let infoContainer = document.createElement('div');
-        infoContainer.classList.add('info-container');
-        let checkContainer = document.createElement('div');
-        checkContainer.classList.add('check-container');
+            if (tasks[i].project == button) {
+            let task = document.createElement('div');
+            task.classList.add('task-card');
+            let infoContainer = document.createElement('div');
+            infoContainer.classList.add('info-container');
+            let checkContainer = document.createElement('div');
+            checkContainer.classList.add('check-container');
 
-        let taskTitle = document.createElement('div');
-        taskTitle.innerText = `${tasks[i].title}`;
+            let taskTitle = document.createElement('div');
+            taskTitle.innerText = `${tasks[i].title}`;
 
-        let taskDescription = document.createElement('div');
-        taskDescription.classList.add('task-description');
-        taskDescription.innerText = `${tasks[i].description}`;
+            let taskDescription = document.createElement('div');
+            taskDescription.classList.add('task-description');
+            taskDescription.innerText = `${tasks[i].description}`;
 
-        let taskDue = document.createElement('div');
-        taskDue.innerText = `${tasks[i].dueDate}`;
+            let taskDue = document.createElement('div');
+            taskDue.innerText = `${tasks[i].dueDate}`;
 
-        let taskPriority = document.createElement('div');
-        taskPriority.classList.add('task-priority');
-        taskPriority.innerText = `Priority: ${tasks[i].priority}`;
+            let taskPriority = document.createElement('div');
+            taskPriority.classList.add('task-priority');
+            taskPriority.innerText = `Priority: ${tasks[i].priority}`;
 
-        let expandButton = document.createElement('img');
-        expandButton.src = _photos_expand_svg__WEBPACK_IMPORTED_MODULE_4__;
-        expandButton.classList.add('expand');
+            let expandButton = document.createElement('img');
+            expandButton.src = _photos_expand_svg__WEBPACK_IMPORTED_MODULE_4__;
+            expandButton.classList.add('expand');
 
-        let deleteButton = document.createElement('img');
-        deleteButton.src = _photos_delete_svg__WEBPACK_IMPORTED_MODULE_6__;
-        deleteButton.classList.add('delete-task');
+            let deleteButton = document.createElement('img');
+            deleteButton.src = _photos_delete_svg__WEBPACK_IMPORTED_MODULE_6__;
+            deleteButton.classList.add('delete-task');
 
-        let checkButton = document.createElement('img');
-        checkButton.src = _photos_checkbox_svg__WEBPACK_IMPORTED_MODULE_5__;
-        checkButton.classList.add('complete-task');
+            let checkButton = document.createElement('img');
+            checkButton.src = _photos_checkbox_svg__WEBPACK_IMPORTED_MODULE_5__;
+            checkButton.classList.add('complete-task');
 
-        body.appendChild(task);
-        task.appendChild(checkContainer);
-        task.appendChild(infoContainer);
-        task.appendChild(taskDescription);
-        task.appendChild(taskPriority);
-        checkContainer.appendChild(checkButton);
-        checkContainer.appendChild(taskTitle);
-        infoContainer.appendChild(taskDue);
-        infoContainer.appendChild(deleteButton);
-        infoContainer.appendChild(expandButton);
+            body.appendChild(task);
+            task.appendChild(checkContainer);
+            task.appendChild(infoContainer);
+            task.appendChild(taskDescription);
+            task.appendChild(taskPriority);
+            checkContainer.appendChild(checkButton);
+            checkContainer.appendChild(taskTitle);
+            infoContainer.appendChild(taskDue);
+            infoContainer.appendChild(deleteButton);
+            infoContainer.appendChild(expandButton);
 
-        (0,_expand_js__WEBPACK_IMPORTED_MODULE_1__["default"])(expandButton, task, taskDescription, taskPriority);
-        (0,_complete_js__WEBPACK_IMPORTED_MODULE_0__["default"])(checkButton, task);
-        (0,_delete_js__WEBPACK_IMPORTED_MODULE_2__["default"])(deleteButton, body, task, tasks, i);
-        (0,_priority_js__WEBPACK_IMPORTED_MODULE_3__["default"])(taskPriority, task, tasks, i);
+            (0,_expand_js__WEBPACK_IMPORTED_MODULE_1__["default"])(expandButton, task, taskDescription, taskPriority);
+            (0,_complete_js__WEBPACK_IMPORTED_MODULE_0__["default"])(checkButton, task);
+            (0,_delete_js__WEBPACK_IMPORTED_MODULE_2__["default"])(deleteButton, body, task, tasks, i);
+            (0,_priority_js__WEBPACK_IMPORTED_MODULE_3__["default"])(taskPriority, task, tasks, i);
+            }
     }
-}
-
-/***/ }),
-/* 22 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ setProject)
-/* harmony export */ });
-function setProject(value) {
-    let project = [];
-
-    return project;
 }
 
 /***/ })
@@ -979,8 +968,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _addProject_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(12);
 /* harmony import */ var _drawTask_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(13);
 /* harmony import */ var _drawAllTasks_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(21);
-/* harmony import */ var _setProject_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(22);
-
 
 
 
@@ -999,9 +986,10 @@ let tasks = (0,_create_js__WEBPACK_IMPORTED_MODULE_1__["default"])(CURRENTPAGE);
 
 homeButton.addEventListener('click', () => {
     CURRENTPAGE = "home";
+    body.innerHTML = '';
     body.style.display = "grid";
     body.style.gridAutoRows = "minmax(auto, 50px)";
-    (0,_drawAllTasks_js__WEBPACK_IMPORTED_MODULE_4__["default"])(body, tasks);
+    (0,_drawAllTasks_js__WEBPACK_IMPORTED_MODULE_4__["default"])(body, tasks, homeButton.innerText.toLowerCase());
 });
 
 printButton.addEventListener('click', () => {
@@ -1009,7 +997,7 @@ printButton.addEventListener('click', () => {
     console.log(tasks);
 });
 
-(0,_addProject_js__WEBPACK_IMPORTED_MODULE_2__["default"])(body, projects, addProjectButton);
+(0,_addProject_js__WEBPACK_IMPORTED_MODULE_2__["default"])(body, tasks, projects, addProjectButton);
 
 taskButton.addEventListener('click', () => {  
     (0,_drawTask_js__WEBPACK_IMPORTED_MODULE_3__["default"])(body, tasks);

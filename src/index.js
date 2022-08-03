@@ -3,7 +3,6 @@ import createTask from './create.js';
 import createProject from './addProject.js';
 import addTask from './drawTask.js';
 import drawAllTasks from './drawAllTasks.js';
-import setProject from './setProject.js';
 
 let mainContent = document.querySelector('.tasks-display');
 let body = document.querySelector('.tasks-area');
@@ -17,9 +16,10 @@ let tasks = createTask(CURRENTPAGE);
 
 homeButton.addEventListener('click', () => {
     CURRENTPAGE = "home";
+    body.innerHTML = '';
     body.style.display = "grid";
     body.style.gridAutoRows = "minmax(auto, 50px)";
-    drawAllTasks(body, tasks);
+    drawAllTasks(body, tasks, homeButton.innerText.toLowerCase());
 });
 
 printButton.addEventListener('click', () => {
@@ -27,7 +27,7 @@ printButton.addEventListener('click', () => {
     console.log(tasks);
 });
 
-createProject(body, projects, addProjectButton);
+createProject(body, tasks, projects, addProjectButton);
 
 taskButton.addEventListener('click', () => {  
     addTask(body, tasks);
