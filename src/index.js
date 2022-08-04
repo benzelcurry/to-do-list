@@ -4,7 +4,6 @@ import createProject from './addProject.js';
 import addTask from './drawTask.js';
 import drawAllTasks from './drawAllTasks.js';
 
-let mainContent = document.querySelector('.tasks-display');
 let body = document.querySelector('.tasks-area');
 let projects = document.querySelector('.projects');
 let addProjectButton = document.querySelector('.add-project');
@@ -13,6 +12,8 @@ let taskButton = document.querySelector('.btn');
 let homeButton = document.querySelector('.home');
 window.CURRENTPAGE = "home";
 let tasks = createTask(CURRENTPAGE);
+const storedTasks = localStorage.getItem('taskList');
+const storedProjects = localStorage.getItem('projects');
 
 homeButton.addEventListener('click', () => {
     CURRENTPAGE = "home";
@@ -25,6 +26,8 @@ homeButton.addEventListener('click', () => {
 printButton.addEventListener('click', () => {
     console.log(CURRENTPAGE);
     console.log(tasks);
+    localStorage.removeItem('taskList');
+    localStorage.removeItem('projects');
 });
 
 createProject(body, tasks, projects, addProjectButton);
@@ -32,3 +35,13 @@ createProject(body, tasks, projects, addProjectButton);
 taskButton.addEventListener('click', () => {  
     addTask(body, tasks);
 });
+
+if (storedTasks) {
+    drawAllTasks(body, JSON.parse(storedTasks), homeButton.innerText.toLowerCase());
+}
+
+if (storedProjects) {
+    let drawProjects = JSON.parse(storedProjects);
+    console.log(drawProjects);
+    // ABLE TO STORE PROJECTS; NOW FIGURE OUT HOW TO DRAW THEM AND CREATE PROJECT FOLDERS
+}

@@ -1,6 +1,6 @@
-
-import createTask from "./create.js";
 import drawAllTasks from "./drawAllTasks.js";
+
+let projectsList = [];
 
 // Creates new projects for organizing tasks
 export default function createProject(body, tasks, projects, addProjectButton, currentPage) {
@@ -20,6 +20,8 @@ export default function createProject(body, tasks, projects, addProjectButton, c
                     newProject.innerText = projectName.value;
                     projects.removeChild(projectName);
                     projects.insertBefore(newProject, addProjectButton);
+                    projectsList.push(newProject.innerText);
+                    localStorage.setItem('projects', JSON.stringify(projectsList));
                 }
             });
         }

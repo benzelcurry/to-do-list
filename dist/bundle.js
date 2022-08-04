@@ -529,6 +529,8 @@ function createTask() {
         taskDue.value = "";
         taskPriority.option = "high";
         document.getElementById("myForm").style.display = "none";
+
+        localStorage.setItem('taskList', JSON.stringify(myTasks));
     });
 
     return myTasks;
@@ -542,11 +544,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ createProject)
 /* harmony export */ });
-/* harmony import */ var _create_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(11);
-/* harmony import */ var _drawAllTasks_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(21);
+/* harmony import */ var _drawAllTasks_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(13);
 
 
-
+let projectsList = [];
 
 // Creates new projects for organizing tasks
 function createProject(body, tasks, projects, addProjectButton, currentPage) {
@@ -566,6 +567,8 @@ function createProject(body, tasks, projects, addProjectButton, currentPage) {
                     newProject.innerText = projectName.value;
                     projects.removeChild(projectName);
                     projects.insertBefore(newProject, addProjectButton);
+                    projectsList.push(newProject.innerText);
+                    localStorage.setItem('projects', JSON.stringify(projectsList));
                 }
             });
         }
@@ -573,210 +576,13 @@ function createProject(body, tasks, projects, addProjectButton, currentPage) {
         newProject.addEventListener('click', () => {
             body.innerHTML = '';
             CURRENTPAGE = newProject.innerText;
-            (0,_drawAllTasks_js__WEBPACK_IMPORTED_MODULE_1__["default"])(body, tasks, newProject.innerText)
+            (0,_drawAllTasks_js__WEBPACK_IMPORTED_MODULE_0__["default"])(body, tasks, newProject.innerText)
         });
     });
 }
 
 /***/ }),
 /* 13 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ addTask)
-/* harmony export */ });
-/* harmony import */ var _complete_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(14);
-/* harmony import */ var _expand_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(15);
-/* harmony import */ var _delete_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(16);
-/* harmony import */ var _priority_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(17);
-/* harmony import */ var _photos_expand_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(18);
-/* harmony import */ var _photos_checkbox_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(19);
-/* harmony import */ var _photos_delete_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(20);
-
-
-
-
-
-
-
-
-function addTask(body, tasks) {
-    for (let i = (tasks.length - 1); i < tasks.length; i++) {
-        let task = document.createElement('div');
-        task.classList.add('task-card');
-        let infoContainer = document.createElement('div');
-        infoContainer.classList.add('info-container');
-        let checkContainer = document.createElement('div');
-        checkContainer.classList.add('check-container');
-
-        let taskTitle = document.createElement('div');
-        taskTitle.innerText = `${tasks[i].title}`;
-
-        let taskDescription = document.createElement('div');
-        taskDescription.classList.add('task-description');
-        taskDescription.innerText = `${tasks[i].description}`;
-
-        let taskDue = document.createElement('div');
-        taskDue.innerText = `${tasks[i].dueDate}`;
-
-        let taskPriority = document.createElement('div');
-        taskPriority.classList.add('task-priority');
-        taskPriority.innerText = `Priority: ${tasks[i].priority}`;
-
-        let expandButton = document.createElement('img');
-        expandButton.src = _photos_expand_svg__WEBPACK_IMPORTED_MODULE_4__;
-        expandButton.classList.add('expand');
-
-        let deleteButton = document.createElement('img');
-        deleteButton.src = _photos_delete_svg__WEBPACK_IMPORTED_MODULE_6__;
-        deleteButton.classList.add('delete-task');
-
-        let checkButton = document.createElement('img');
-        checkButton.src = _photos_checkbox_svg__WEBPACK_IMPORTED_MODULE_5__;
-        checkButton.classList.add('complete-task');
-
-        body.appendChild(task);
-        task.appendChild(checkContainer);
-        task.appendChild(infoContainer);
-        task.appendChild(taskDescription);
-        task.appendChild(taskPriority);
-        checkContainer.appendChild(checkButton);
-        checkContainer.appendChild(taskTitle);
-        infoContainer.appendChild(taskDue);
-        infoContainer.appendChild(deleteButton);
-        infoContainer.appendChild(expandButton);
-
-        (0,_expand_js__WEBPACK_IMPORTED_MODULE_1__["default"])(expandButton, task, taskDescription, taskPriority);
-        (0,_complete_js__WEBPACK_IMPORTED_MODULE_0__["default"])(checkButton, task);
-        (0,_delete_js__WEBPACK_IMPORTED_MODULE_2__["default"])(deleteButton, body, task, tasks, i);
-        (0,_priority_js__WEBPACK_IMPORTED_MODULE_3__["default"])(taskPriority, task, tasks, i);
-    }
-};
-
-/***/ }),
-/* 14 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ completeTask)
-/* harmony export */ });
-function completeTask(checkButton) {
-    let checked = false;
-
-    checkButton.addEventListener('click', () => {
-        if (checked == false) {
-            checked = true;
-            checkButton.style.filter = "invert(40%) sepia(39%) saturate(4105%) hue-rotate(136deg) brightness(99%) contrast(97%)";
-        } else {
-            checked = false;
-            checkButton.style.filter = "invert(79%) sepia(8%) saturate(113%) hue-rotate(314deg) brightness(108%) contrast(96%)";
-        }     
-    });
-}
-
-/***/ }),
-/* 15 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ expandTask)
-/* harmony export */ });
-function expandTask(expandButton, task, taskDescription, taskPriority) {
-    let expanded = false;
-
-    expandButton.addEventListener('click', () => {
-        if (expanded == false) {
-            expanded = true;
-            task.style.height = "125px";
-            task.style.alignContent = "start";
-            taskDescription.style.display = "inherit";
-            taskPriority.style.display = "inherit";
-        } else {
-            expanded = false;
-            task.style.height = "30px";
-            task.style.alignContent = "center";
-            taskDescription.style.display = "none";
-            taskPriority.style.display = "none";
-        }
-    });
-}
-
-/***/ }),
-/* 16 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ deleteTask)
-/* harmony export */ });
-function deleteTask(deleteButton, body, task, tasks, i) {
-    deleteButton.addEventListener('click', () => {
-        body.removeChild(task);
-        tasks.splice(i, 1);
-    });
-}
-
-/***/ }),
-/* 17 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ changePriority)
-/* harmony export */ });
-function changePriority(taskPriority, task, tasks, i) {
-    taskPriority.addEventListener('click', () => {
-        if (tasks[i].priority == "High") {
-            tasks[i].priority = "Medium";
-            taskPriority.innerText = `Priority: ${tasks[i].priority}`;
-            changeShadow();
-        } else if (tasks[i].priority == "Medium") {
-            tasks[i].priority = "Low";
-            taskPriority.innerText = `Priority: ${tasks[i].priority}`;
-            changeShadow();
-        } else {
-            tasks[i].priority = "High";
-            taskPriority.innerText = `Priority: ${tasks[i].priority}`;
-            changeShadow();
-        }
-    });
-
-    const changeShadow = () => {
-        if (tasks[i].priority == "High") {
-            task.style.boxShadow = "5px 5px 8px red";
-        } else if (tasks[i].priority == "Medium") {
-            task.style.boxShadow = "5px 5px 8px orange";
-        } else {
-            task.style.boxShadow = "5px 5px 8px lightgreen";
-        }
-    }
-
-    changeShadow();
-}
-
-/***/ }),
-/* 18 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "e40a80aa221c8c69df7d.svg";
-
-/***/ }),
-/* 19 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "80bbc46b28eab201ebb9.svg";
-
-/***/ }),
-/* 20 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "7747e0f66efb7f7a1be6.svg";
-
-/***/ }),
-/* 21 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -852,6 +658,208 @@ function drawAllTasks(body, tasks, button) {
             }
     }
 }
+
+/***/ }),
+/* 14 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ completeTask)
+/* harmony export */ });
+function completeTask(checkButton) {
+    let checked = false;
+
+    checkButton.addEventListener('click', () => {
+        if (checked == false) {
+            checked = true;
+            checkButton.style.filter = "invert(40%) sepia(39%) saturate(4105%) hue-rotate(136deg) brightness(99%) contrast(97%)";
+        } else {
+            checked = false;
+            checkButton.style.filter = "invert(79%) sepia(8%) saturate(113%) hue-rotate(314deg) brightness(108%) contrast(96%)";
+        }     
+    });
+}
+
+/***/ }),
+/* 15 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ expandTask)
+/* harmony export */ });
+function expandTask(expandButton, task, taskDescription, taskPriority) {
+    let expanded = false;
+
+    expandButton.addEventListener('click', () => {
+        if (expanded == false) {
+            expanded = true;
+            task.style.height = "125px";
+            task.style.alignContent = "start";
+            taskDescription.style.display = "inherit";
+            taskPriority.style.display = "inherit";
+        } else {
+            expanded = false;
+            task.style.height = "30px";
+            task.style.alignContent = "center";
+            taskDescription.style.display = "none";
+            taskPriority.style.display = "none";
+        }
+    });
+}
+
+/***/ }),
+/* 16 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ deleteTask)
+/* harmony export */ });
+function deleteTask(deleteButton, body, task, tasks, i) {
+    deleteButton.addEventListener('click', () => {
+        body.removeChild(task);
+        tasks.splice(i, 1);
+        localStorage.setItem('taskList', tasks);
+    });
+}
+
+/***/ }),
+/* 17 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ changePriority)
+/* harmony export */ });
+function changePriority(taskPriority, task, tasks, i) {
+    taskPriority.addEventListener('click', () => {
+        if (tasks[i].priority == "High") {
+            tasks[i].priority = "Medium";
+            taskPriority.innerText = `Priority: ${tasks[i].priority}`;
+            changeShadow();
+        } else if (tasks[i].priority == "Medium") {
+            tasks[i].priority = "Low";
+            taskPriority.innerText = `Priority: ${tasks[i].priority}`;
+            changeShadow();
+        } else {
+            tasks[i].priority = "High";
+            taskPriority.innerText = `Priority: ${tasks[i].priority}`;
+            changeShadow();
+        }
+    });
+
+    const changeShadow = () => {
+        if (tasks[i].priority == "High") {
+            task.style.boxShadow = "5px 5px 8px red";
+        } else if (tasks[i].priority == "Medium") {
+            task.style.boxShadow = "5px 5px 8px orange";
+        } else {
+            task.style.boxShadow = "5px 5px 8px lightgreen";
+        }
+    }
+
+    changeShadow();
+}
+
+/***/ }),
+/* 18 */
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "e40a80aa221c8c69df7d.svg";
+
+/***/ }),
+/* 19 */
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "80bbc46b28eab201ebb9.svg";
+
+/***/ }),
+/* 20 */
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "7747e0f66efb7f7a1be6.svg";
+
+/***/ }),
+/* 21 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ addTask)
+/* harmony export */ });
+/* harmony import */ var _complete_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(14);
+/* harmony import */ var _expand_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(15);
+/* harmony import */ var _delete_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(16);
+/* harmony import */ var _priority_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(17);
+/* harmony import */ var _photos_expand_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(18);
+/* harmony import */ var _photos_checkbox_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(19);
+/* harmony import */ var _photos_delete_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(20);
+
+
+
+
+
+
+
+
+
+function addTask(body, tasks) {
+    for (let i = (tasks.length - 1); i < tasks.length; i++) {
+        let task = document.createElement('div');
+        task.classList.add('task-card');
+        let infoContainer = document.createElement('div');
+        infoContainer.classList.add('info-container');
+        let checkContainer = document.createElement('div');
+        checkContainer.classList.add('check-container');
+
+        let taskTitle = document.createElement('div');
+        taskTitle.innerText = `${tasks[i].title}`;
+
+        let taskDescription = document.createElement('div');
+        taskDescription.classList.add('task-description');
+        taskDescription.innerText = `${tasks[i].description}`;
+
+        let taskDue = document.createElement('input');
+        taskDue.type = "date";
+        taskDue.id = "due-date";
+        taskDue.name = "due-date"
+
+        let taskPriority = document.createElement('div');
+        taskPriority.classList.add('task-priority');
+        taskPriority.innerText = `Priority: ${tasks[i].priority}`;
+
+        let expandButton = document.createElement('img');
+        expandButton.src = _photos_expand_svg__WEBPACK_IMPORTED_MODULE_4__;
+        expandButton.classList.add('expand');
+
+        let deleteButton = document.createElement('img');
+        deleteButton.src = _photos_delete_svg__WEBPACK_IMPORTED_MODULE_6__;
+        deleteButton.classList.add('delete-task');
+
+        let checkButton = document.createElement('img');
+        checkButton.src = _photos_checkbox_svg__WEBPACK_IMPORTED_MODULE_5__;
+        checkButton.classList.add('complete-task');
+
+        body.appendChild(task);
+        task.appendChild(checkContainer);
+        task.appendChild(infoContainer);
+        task.appendChild(taskDescription);
+        task.appendChild(taskPriority);
+        checkContainer.appendChild(checkButton);
+        checkContainer.appendChild(taskTitle);
+        // TRY TO CUSTOMIZE APPEARANCE WITH date-fns
+        infoContainer.appendChild(taskDue);
+        infoContainer.appendChild(deleteButton);
+        infoContainer.appendChild(expandButton);
+
+        (0,_expand_js__WEBPACK_IMPORTED_MODULE_1__["default"])(expandButton, task, taskDescription, taskPriority);
+        (0,_complete_js__WEBPACK_IMPORTED_MODULE_0__["default"])(checkButton, task);
+        (0,_delete_js__WEBPACK_IMPORTED_MODULE_2__["default"])(deleteButton, body, task, tasks, i);
+        (0,_priority_js__WEBPACK_IMPORTED_MODULE_3__["default"])(taskPriority, task, tasks, i);
+    }
+};
 
 /***/ })
 /******/ 	]);
@@ -966,15 +974,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _create_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(11);
 /* harmony import */ var _addProject_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(12);
-/* harmony import */ var _drawTask_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(13);
-/* harmony import */ var _drawAllTasks_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(21);
+/* harmony import */ var _drawTask_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(21);
+/* harmony import */ var _drawAllTasks_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(13);
 
 
 
 
 
 
-let mainContent = document.querySelector('.tasks-display');
 let body = document.querySelector('.tasks-area');
 let projects = document.querySelector('.projects');
 let addProjectButton = document.querySelector('.add-project');
@@ -983,6 +990,8 @@ let taskButton = document.querySelector('.btn');
 let homeButton = document.querySelector('.home');
 window.CURRENTPAGE = "home";
 let tasks = (0,_create_js__WEBPACK_IMPORTED_MODULE_1__["default"])(CURRENTPAGE);
+const storedTasks = localStorage.getItem('taskList');
+const storedProjects = localStorage.getItem('projects');
 
 homeButton.addEventListener('click', () => {
     CURRENTPAGE = "home";
@@ -995,6 +1004,8 @@ homeButton.addEventListener('click', () => {
 printButton.addEventListener('click', () => {
     console.log(CURRENTPAGE);
     console.log(tasks);
+    localStorage.removeItem('taskList');
+    localStorage.removeItem('projects');
 });
 
 (0,_addProject_js__WEBPACK_IMPORTED_MODULE_2__["default"])(body, tasks, projects, addProjectButton);
@@ -1002,6 +1013,16 @@ printButton.addEventListener('click', () => {
 taskButton.addEventListener('click', () => {  
     (0,_drawTask_js__WEBPACK_IMPORTED_MODULE_3__["default"])(body, tasks);
 });
+
+if (storedTasks) {
+    (0,_drawAllTasks_js__WEBPACK_IMPORTED_MODULE_4__["default"])(body, JSON.parse(storedTasks), homeButton.innerText.toLowerCase());
+}
+
+if (storedProjects) {
+    let drawProjects = JSON.parse(storedProjects);
+    console.log(drawProjects);
+    // ABLE TO STORE PROJECTS; NOW FIGURE OUT HOW TO DRAW THEM AND CREATE PROJECT FOLDERS
+}
 })();
 
 /******/ })()

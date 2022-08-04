@@ -46,6 +46,8 @@ export default function createTask() {
         taskDue.value = "";
         taskPriority.option = "high";
         document.getElementById("myForm").style.display = "none";
+
+        localStorage.setItem('taskList', JSON.stringify(myTasks));
     });
 
     return myTasks;
