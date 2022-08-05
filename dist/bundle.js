@@ -351,7 +351,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n    margin: 0;\n    font-family: 'Roboto', Arial, Helvetica, sans-serif;\n}\n\n#content {\n    height: 100vh;\n    width: 100vw;\n    display: grid;\n    grid-template-rows: 100px 1fr 50px;\n}\n\n/* Header content */\n.header {\n    background-color: #474b5a;\n    display: flex;\n    align-items: center;\n    padding: 40px;\n    gap: 10px;\n    font-size: 42px;\n    color: #e7e8f1;\n}\n\n.header-icon {\n    height: 42px;\n    width: auto;\n    padding-bottom: 2px;\n    filter: invert(97%) sepia(5%) saturate(1089%) hue-rotate(187deg) brightness(100%) contrast(90%);\n}\n\n/* Main content */\n.main {\n    display: grid;\n    grid-template-columns: 275px 1fr;\n}\n\n.sidebar {\n    background-color: #949cb9;\n    display: grid;\n    grid-auto-rows: 40px;\n    gap: 50px;\n    padding: 50px 30px 0 30px;\n}\n\n.home {\n    align-self: start;\n    padding: 5px;\n    display: flex;\n    align-items: center;\n    gap: 10px;\n    border-radius: 10px;\n}\n\n.home:hover {\n    cursor: pointer;\n    backdrop-filter: brightness(90%);\n}\n\n.home-icon {\n    height: 32px;\n    width: auto;\n}\n\n.projects {\n    display: grid;\n    padding: 5px;\n    font-size: 32px;\n    font-weight: bold;\n    grid-auto-rows: 40px;\n    gap: 10px;\n}\n\n.add-button {\n    height: 14px;\n    width: auto;\n}\n\n.add-project {\n    font-weight: 400;\n    font-size: 1rem;\n    display: flex;\n    gap: 10px;\n    padding: 5px;\n    align-items: center;\n    border-radius: 10px;\n}\n\n.add-project:hover {\n    cursor: pointer;\n    backdrop-filter: brightness(90%);\n}\n\n.add-text {\n    padding-top: 3px;\n}\n\n.new-project {\n    font-weight: 400;\n    font-size: 1rem;\n    display: flex;\n    gap: 10px;\n    padding: 5px;\n    align-items: center;\n    border-radius: 10px;\n}\n\n.new-project:hover {\n    cursor: pointer;\n    backdrop-filter: brightness(90%);\n}\n\n#project-name {\n    width: 190px;\n    height: 40px;\n    border-radius: 10px;\n    background-color: #e7e8f1;\n}\n\n#project-name:focus {\n    outline: none;\n}\n\n/* Main content: Task content */\n.tasks-display {\n    display: grid;\n    grid-template-rows: 50px;\n    gap: 25px;\n    padding: 25px;\n    background-color: #e7e8f1;\n    overflow: auto;\n}\n\n.tasks-display > button {\n    height: 25px;\n    width: 100px;\n}\n\n.tasks-area {\n    display: grid;\n    grid-auto-rows: minmax(auto, 50px);\n    gap: 25px;\n    padding: 25px;\n    background-color: #e7e8f1;\n    overflow: auto;\n}\n\n.task-card {\n    display: grid;\n    background-color: #fff;\n    grid-template-columns: 1fr 1fr;\n    grid-template-rows: 1fr 4fr;\n    width: 500px;\n    height: 30px;\n    border-radius: 30px;\n    align-items: center;\n    justify-content: space-between;\n    padding: 10px;\n    gap: 10px;\n}\n\n.expand {\n    height: 20px;\n    width: auto;\n}\n\n.expand:hover {\n    cursor: pointer;\n}\n\n.delete-task {\n    height: 20px;\n    width: auto;\n}\n\n.delete-task:hover {\n    cursor: pointer;\n}\n\n.complete-task {\n    filter: invert(79%) sepia(8%) saturate(113%) hue-rotate(314deg) brightness(108%) contrast(96%);\n    cursor: pointer;\n}\n\n.check-container {\n    display: flex;\n    justify-content: start;\n    align-items: center;\n    gap: 15px;\n    margin-top: 3px;\n}\n\n.info-container {\n    display: flex;\n    justify-content: end;\n    align-items: center;\n    gap: 15px;\n    margin-top: 3px;\n}\n\n.task-description {\n    display: none;\n    align-self: start;\n    justify-self: start;\n    word-break: break-all;\n}\n\n.task-priority {\n    display: none;\n    align-self: end;\n    justify-self: end;\n    padding: 5px;\n    font-size: 0.75em;\n}\n\n.task-priority:hover {\n    cursor: pointer;\n    backdrop-filter: brightness(90%);\n}\n\n/* Footer content */\n.footer {\n    display: flex;\n    background-color: #474b5a;\n    align-items: center;\n    justify-content: center;\n    gap: 8px;\n    color: white;\n}\n\na {\n    text-decoration: none;\n    color: #e7e8f1;\n    font-size: 18px;\n}\n\n.github {\n    filter: invert(97%) sepia(5%) saturate(1089%) hue-rotate(187deg) brightness(100%) contrast(90%);\n}\n\n.github:hover {\n    -webkit-transform: scale(1.3);\n    -ms-transform: scale(1.3);\n    transform: scale(1.3);;\n}\n\n/* Pop-up data entry form */\n\n.form-popup {\n    display: none;\n    align-self: center;\n    justify-self: center;\n    border-radius: 40px;\n    border: 3px solid black;\n    z-index: 9;\n    position: fixed;\n    overflow: hidden;\n  }\n  \n  /* Add styles to the form container */\n  .form-container {\n    display: grid;\n    width: 750px;\n    padding: 25px;\n    background-color: #bac1da;\n  }\n  \n  /* input fields */\n  input[type=text], #due-date-input, select {\n    width: 50%;\n    height: 40px;\n    padding: 0 10px 0 10px;\n    margin: 5px 0 22px 0;\n    border: none;\n    background: #e7e8f1;\n    font-size: 16px;\n    font-family: 'roboto', Arial, Helvetica, sans-serif;\n    outline: none;\n  }\n\n  select {\n    width: 395px;\n  }\n  \n  \n  /* Set a style for the submit button */\n  .form-container button {\n    background-color: #04AA6D;\n    color: white;\n    padding: 16px 20px;\n    border: none;\n    cursor: pointer;\n    width: 40%;\n    margin-bottom:10px;\n    opacity: 0.8;\n    border-radius: 10px;\n\n  }\n  \n  /* Add a red background color to the cancel button */\n  .form-container .btn-cancel {\n    background-color: red;\n  }\n  \n  /* Add some hover effects to buttons */\n  .form-container button:hover {\n    opacity: 1;\n  }\n  \n  /* positioning for popup buttons */\n  .popup-buttons {\n      display: flex;\n      gap: 40px;\n      margin: 40px;\n      justify-content: center;\n  }", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n    margin: 0;\n    font-family: 'Roboto', Arial, Helvetica, sans-serif;\n}\n\n#content {\n    height: 100vh;\n    width: 100vw;\n    display: grid;\n    grid-template-rows: 100px 1fr 50px;\n}\n\n/* Header content */\n.header {\n    background-color: #474b5a;\n    display: flex;\n    align-items: center;\n    padding: 40px;\n    gap: 10px;\n    font-size: 42px;\n    color: #e7e8f1;\n}\n\n.header-icon {\n    height: 42px;\n    width: auto;\n    padding-bottom: 2px;\n    filter: invert(97%) sepia(5%) saturate(1089%) hue-rotate(187deg) brightness(100%) contrast(90%);\n}\n\n/* Main content */\n.main {\n    display: grid;\n    grid-template-columns: 275px 1fr;\n}\n\n.sidebar {\n    background-color: #949cb9;\n    display: grid;\n    grid-auto-rows: 40px;\n    gap: 50px;\n    padding: 50px 30px 0 30px;\n}\n\n.home {\n    align-self: start;\n    padding: 5px;\n    display: flex;\n    align-items: center;\n    gap: 10px;\n    border-radius: 10px;\n}\n\n.home:hover {\n    cursor: pointer;\n    backdrop-filter: brightness(90%);\n}\n\n.home-icon {\n    height: 32px;\n    width: auto;\n}\n\n.projects {\n    display: grid;\n    padding: 5px;\n    font-size: 32px;\n    font-weight: bold;\n    grid-auto-rows: 40px;\n    gap: 10px;\n}\n\n.buttons {\n    display: flex;\n    justify-self: center;\n    gap: 100px;\n}\n\n.open-form,\n.btn-console {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    border: none;\n    text-align: center;\n    height: 50px;\n    width: 175px;\n    font-size: 32px;\n    padding: 10px;\n}\n\n.open-form:hover,\n.btn-console:hover {\n    cursor: pointer;\n    backdrop-filter: brightness(90%);\n}\n\n.add-button {\n    height: 14px;\n    width: auto;\n}\n\n.add-project {\n    font-weight: 400;\n    font-size: 1rem;\n    display: flex;\n    gap: 10px;\n    padding: 5px;\n    align-items: center;\n    border-radius: 10px;\n}\n\n.add-project:hover {\n    cursor: pointer;\n    backdrop-filter: brightness(90%);\n}\n\n.add-text {\n    padding-top: 3px;\n}\n\n.new-project {\n    font-weight: 400;\n    font-size: 1rem;\n    display: flex;\n    gap: 10px;\n    padding: 5px;\n    align-items: center;\n    border-radius: 10px;\n}\n\n.new-project:hover {\n    cursor: pointer;\n    backdrop-filter: brightness(90%);\n}\n\n#project-name {\n    width: 190px;\n    height: 40px;\n    border-radius: 10px;\n    background-color: #e7e8f1;\n}\n\n#project-name:focus {\n    outline: none;\n}\n\n/* Main content: Task content */\n.tasks-display {\n    display: grid;\n    grid-template-rows: 50px;\n    gap: 25px;\n    padding: 25px;\n    background-color: #e7e8f1;\n    overflow: auto;\n}\n\n.tasks-display > button {\n    height: 25px;\n    width: 100px;\n}\n\n.tasks-area {\n    display: grid;\n    grid-auto-rows: minmax(auto, 50px);\n    gap: 25px;\n    padding: 25px;\n    background-color: #e7e8f1;\n    overflow: auto;\n}\n\n.task-card {\n    display: grid;\n    background-color: #fff;\n    grid-template-columns: 1fr 1fr;\n    grid-template-rows: 1fr 4fr;\n    width: 500px;\n    height: 30px;\n    border-radius: 30px;\n    align-items: center;\n    justify-content: space-between;\n    padding: 10px;\n    gap: 10px;\n}\n\n.expand {\n    height: 20px;\n    width: auto;\n}\n\n.expand:hover {\n    cursor: pointer;\n}\n\n.delete-task {\n    height: 20px;\n    width: auto;\n}\n\n.delete-task:hover {\n    cursor: pointer;\n}\n\n.complete-task {\n    filter: invert(79%) sepia(8%) saturate(113%) hue-rotate(314deg) brightness(108%) contrast(96%);\n    cursor: pointer;\n}\n\n.check-container {\n    display: flex;\n    justify-content: start;\n    align-items: center;\n    gap: 15px;\n    margin-top: 3px;\n}\n\n.info-container {\n    display: flex;\n    justify-content: end;\n    align-items: center;\n    gap: 15px;\n    margin-top: 3px;\n}\n\n.task-description {\n    display: none;\n    align-self: start;\n    justify-self: start;\n    word-break: break-all;\n}\n\n.task-priority {\n    display: none;\n    align-self: end;\n    justify-self: end;\n    padding: 5px;\n    font-size: 0.75em;\n}\n\n.task-priority:hover {\n    cursor: pointer;\n    backdrop-filter: brightness(90%);\n}\n\n/* Footer content */\n.footer {\n    display: flex;\n    background-color: #474b5a;\n    align-items: center;\n    justify-content: center;\n    gap: 8px;\n    color: white;\n}\n\na {\n    text-decoration: none;\n    color: #e7e8f1;\n    font-size: 18px;\n}\n\n.github {\n    filter: invert(97%) sepia(5%) saturate(1089%) hue-rotate(187deg) brightness(100%) contrast(90%);\n}\n\n.github:hover {\n    -webkit-transform: scale(1.3);\n    -ms-transform: scale(1.3);\n    transform: scale(1.3);;\n}\n\n/* Pop-up data entry form */\n\n.form-popup {\n    display: none;\n    align-self: center;\n    justify-self: center;\n    border-radius: 40px;\n    border: 3px solid black;\n    z-index: 9;\n    position: fixed;\n    overflow: hidden;\n  }\n  \n  /* Add styles to the form container */\n  .form-container {\n    display: grid;\n    width: 750px;\n    padding: 25px;\n    background-color: #bac1da;\n  }\n  \n  /* input fields */\n  input[type=text], #due-date-input, select {\n    width: 50%;\n    height: 40px;\n    padding: 0 10px 0 10px;\n    margin: 5px 0 22px 0;\n    border: none;\n    background: #e7e8f1;\n    font-size: 16px;\n    font-family: 'roboto', Arial, Helvetica, sans-serif;\n    outline: none;\n  }\n\n  select {\n    width: 395px;\n  }\n  \n  \n  /* Set a style for the submit button */\n  .form-container button {\n    background-color: #04AA6D;\n    color: white;\n    padding: 16px 20px;\n    border: none;\n    cursor: pointer;\n    width: 40%;\n    margin-bottom:10px;\n    opacity: 0.8;\n    border-radius: 10px;\n\n  }\n  \n  /* Add a red background color to the cancel button */\n  .form-container .btn-cancel {\n    background-color: red;\n  }\n  \n  /* Add some hover effects to buttons */\n  .form-container button:hover {\n    opacity: 1;\n  }\n  \n  /* positioning for popup buttons */\n  .popup-buttons {\n      display: flex;\n      gap: 40px;\n      margin: 40px;\n      justify-content: center;\n  }", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -568,8 +568,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _photos_expand_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(17);
 /* harmony import */ var _photos_checkbox_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(18);
 /* harmony import */ var _photos_delete_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(19);
-/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(23);
-/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(58);
+/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(20);
+/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(55);
 
 
 
@@ -624,7 +624,6 @@ function addTask(body, tasks) {
         task.appendChild(taskPriority);
         checkContainer.appendChild(checkButton);
         checkContainer.appendChild(taskTitle);
-        // TRY TO CUSTOMIZE APPEARANCE WITH date-fns
         infoContainer.appendChild(taskDue);
         infoContainer.appendChild(deleteButton);
         infoContainer.appendChild(expandButton);
@@ -765,175 +764,19 @@ module.exports = __webpack_require__.p + "7747e0f66efb7f7a1be6.svg";
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ createProject)
-/* harmony export */ });
-/* harmony import */ var _drawAllTasks_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(21);
-
-
-const storedProjects = localStorage.getItem('projects');
-let projectsList = [];
-
-if (storedProjects) {
-    projectsList = JSON.parse(storedProjects);
-}
-
-// Creates new projects for organizing tasks
-function createProject(body, tasks, projects, addProjectButton) {
-    addProjectButton.addEventListener('click', () => {
-        let newProject = document.createElement('div');
-        let projectName = document.createElement('input');
-        projectName.type = "text";
-        projectName.id = "project-name";
-        projectName.name = "project-name";
-        projectName.maxLength = "30";
-        newProject.classList.add('new-project');
-        projects.insertBefore(projectName, addProjectButton);
-        projectName.focus();
-        if (projectName == document.activeElement) {
-            projectName.addEventListener('keypress', (e) => {
-                if (e.key === 'Enter') {
-                    newProject.innerText = projectName.value;
-                    projects.removeChild(projectName);
-                    projects.insertBefore(newProject, addProjectButton);
-                    projectsList.push(newProject.innerText);
-                    localStorage.setItem('projects', JSON.stringify(projectsList));
-                }
-            });
-        }
-        
-        newProject.addEventListener('click', () => {
-            body.innerHTML = '';
-            CURRENTPAGE = newProject.innerText;
-            (0,_drawAllTasks_js__WEBPACK_IMPORTED_MODULE_0__["default"])(body, tasks, newProject.innerText)
-        });
-    });
-}
-
-/***/ }),
-/* 21 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ drawAllTasks)
-/* harmony export */ });
-/* harmony import */ var _complete_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(13);
-/* harmony import */ var _expand_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(14);
-/* harmony import */ var _delete_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(15);
-/* harmony import */ var _priority_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(16);
-/* harmony import */ var _photos_expand_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(17);
-/* harmony import */ var _photos_checkbox_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(18);
-/* harmony import */ var _photos_delete_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(19);
-
-
-
-
-
-
-
-
-function drawAllTasks(body, tasks, button) {
-    for (let i = 0; i < tasks.length; i++) {
-            if (tasks[i].project == button) {
-                let task = document.createElement('div');
-                task.classList.add('task-card');
-                let infoContainer = document.createElement('div');
-                infoContainer.classList.add('info-container');
-                let checkContainer = document.createElement('div');
-                checkContainer.classList.add('check-container');
-
-                let taskTitle = document.createElement('div');
-                taskTitle.innerText = `${tasks[i].title}`;
-
-                let taskDescription = document.createElement('div');
-                taskDescription.classList.add('task-description');
-                taskDescription.innerText = `${tasks[i].description}`;
-
-                let taskDue = document.createElement('input');
-                taskDue.type = "date";
-                taskDue.id = "due-date";
-                taskDue.name = "due-date";
-
-                let taskPriority = document.createElement('div');
-                taskPriority.classList.add('task-priority');
-                taskPriority.innerText = `Priority: ${tasks[i].priority}`;
-
-                let expandButton = document.createElement('img');
-                expandButton.src = _photos_expand_svg__WEBPACK_IMPORTED_MODULE_4__;
-                expandButton.classList.add('expand');
-
-                let deleteButton = document.createElement('img');
-                deleteButton.src = _photos_delete_svg__WEBPACK_IMPORTED_MODULE_6__;
-                deleteButton.classList.add('delete-task');
-
-                let checkButton = document.createElement('img');
-                checkButton.src = _photos_checkbox_svg__WEBPACK_IMPORTED_MODULE_5__;
-                checkButton.classList.add('complete-task');
-
-                body.appendChild(task);
-                task.appendChild(checkContainer);
-                task.appendChild(infoContainer);
-                task.appendChild(taskDescription);
-                task.appendChild(taskPriority);
-                checkContainer.appendChild(checkButton);
-                checkContainer.appendChild(taskTitle);
-                infoContainer.appendChild(taskDue);
-                infoContainer.appendChild(deleteButton);
-                infoContainer.appendChild(expandButton);
-
-                (0,_expand_js__WEBPACK_IMPORTED_MODULE_1__["default"])(expandButton, task, taskDescription, taskPriority);
-                (0,_complete_js__WEBPACK_IMPORTED_MODULE_0__["default"])(checkButton, task);
-                (0,_delete_js__WEBPACK_IMPORTED_MODULE_2__["default"])(deleteButton, body, task, tasks, i);
-                (0,_priority_js__WEBPACK_IMPORTED_MODULE_3__["default"])(taskPriority, task, tasks, i);
-                }
-    }
-}
-
-/***/ }),
-/* 22 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ restoreProjects)
-/* harmony export */ });
-/* harmony import */ var _drawAllTasks_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(21);
-
-
-function restoreProjects(body, tasks, projects, addProjectButton, storedProjects) {
-    for (let i = 0; i < storedProjects.length; i++) {
-        let newProject = document.createElement('div');
-        newProject.classList.add('new-project');
-        newProject.innerText = storedProjects[i];
-        projects.insertBefore(newProject, addProjectButton);
-
-        newProject.addEventListener('click', () => {
-            body.innerHTML = '';
-            CURRENTPAGE = newProject.innerText;
-            (0,_drawAllTasks_js__WEBPACK_IMPORTED_MODULE_0__["default"])(body, tasks, newProject.innerText)
-        });
-    }
-}
-
-/***/ }),
-/* 23 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ format)
 /* harmony export */ });
-/* harmony import */ var _isValid_index_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(39);
-/* harmony import */ var _subMilliseconds_index_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(42);
-/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(38);
-/* harmony import */ var _lib_format_formatters_index_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(45);
-/* harmony import */ var _lib_format_longFormatters_index_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(44);
-/* harmony import */ var _lib_getTimezoneOffsetInMilliseconds_index_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(41);
-/* harmony import */ var _lib_protectedTokens_index_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(57);
-/* harmony import */ var _lib_toInteger_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(37);
-/* harmony import */ var _lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
-/* harmony import */ var _lib_defaultOptions_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(25);
-/* harmony import */ var _lib_defaultLocale_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(26);
+/* harmony import */ var _isValid_index_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(36);
+/* harmony import */ var _subMilliseconds_index_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(39);
+/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(35);
+/* harmony import */ var _lib_format_formatters_index_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(42);
+/* harmony import */ var _lib_format_longFormatters_index_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(41);
+/* harmony import */ var _lib_getTimezoneOffsetInMilliseconds_index_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(38);
+/* harmony import */ var _lib_protectedTokens_index_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(54);
+/* harmony import */ var _lib_toInteger_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(34);
+/* harmony import */ var _lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(21);
+/* harmony import */ var _lib_defaultOptions_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(22);
+/* harmony import */ var _lib_defaultLocale_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(23);
 
 
 
@@ -1354,7 +1197,7 @@ function cleanEscapedString(input) {
 }
 
 /***/ }),
-/* 24 */
+/* 21 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1368,7 +1211,7 @@ function requiredArgs(required, args) {
 }
 
 /***/ }),
-/* 25 */
+/* 22 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1385,30 +1228,30 @@ function setDefaultOptions(newOptions) {
 }
 
 /***/ }),
-/* 26 */
+/* 23 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _locale_en_US_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(27);
+/* harmony import */ var _locale_en_US_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_locale_en_US_index_js__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
 /***/ }),
-/* 27 */
+/* 24 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _lib_formatDistance_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(28);
-/* harmony import */ var _lib_formatLong_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(29);
-/* harmony import */ var _lib_formatRelative_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(31);
-/* harmony import */ var _lib_localize_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(32);
-/* harmony import */ var _lib_match_index_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(34);
+/* harmony import */ var _lib_formatDistance_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(25);
+/* harmony import */ var _lib_formatLong_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(26);
+/* harmony import */ var _lib_formatRelative_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(28);
+/* harmony import */ var _lib_localize_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(29);
+/* harmony import */ var _lib_match_index_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(31);
 
 
 
@@ -1441,7 +1284,7 @@ var locale = {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (locale);
 
 /***/ }),
-/* 28 */
+/* 25 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1538,14 +1381,14 @@ var formatDistance = function (token, count, options) {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (formatDistance);
 
 /***/ }),
-/* 29 */
+/* 26 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _lib_buildFormatLongFn_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(30);
+/* harmony import */ var _lib_buildFormatLongFn_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(27);
 
 var dateFormats = {
   full: 'EEEE, MMMM do, y',
@@ -1582,7 +1425,7 @@ var formatLong = {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (formatLong);
 
 /***/ }),
-/* 30 */
+/* 27 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1600,7 +1443,7 @@ function buildFormatLongFn(args) {
 }
 
 /***/ }),
-/* 31 */
+/* 28 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1623,14 +1466,14 @@ var formatRelative = function (token, _date, _baseDate, _options) {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (formatRelative);
 
 /***/ }),
-/* 32 */
+/* 29 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _lib_buildLocalizeFn_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(33);
+/* harmony import */ var _lib_buildLocalizeFn_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(30);
 
 var eraValues = {
   narrow: ['B', 'A'],
@@ -1779,7 +1622,7 @@ var localize = {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (localize);
 
 /***/ }),
-/* 33 */
+/* 30 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1810,15 +1653,15 @@ function buildLocalizeFn(args) {
 }
 
 /***/ }),
-/* 34 */
+/* 31 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _lib_buildMatchFn_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(36);
-/* harmony import */ var _lib_buildMatchPatternFn_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(35);
+/* harmony import */ var _lib_buildMatchFn_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(33);
+/* harmony import */ var _lib_buildMatchPatternFn_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(32);
 
 
 var matchOrdinalNumberPattern = /^(\d+)(th|st|nd|rd)?/i;
@@ -1919,7 +1762,7 @@ var match = {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (match);
 
 /***/ }),
-/* 35 */
+/* 32 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1945,7 +1788,7 @@ function buildMatchPatternFn(args) {
 }
 
 /***/ }),
-/* 36 */
+/* 33 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -2002,7 +1845,7 @@ function findIndex(array, predicate) {
 }
 
 /***/ }),
-/* 37 */
+/* 34 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -2024,14 +1867,14 @@ function toInteger(dirtyNumber) {
 }
 
 /***/ }),
-/* 38 */
+/* 35 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ toDate)
 /* harmony export */ });
-/* harmony import */ var _lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
+/* harmony import */ var _lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(21);
 
 /**
  * @name toDate
@@ -2086,16 +1929,16 @@ function toDate(argument) {
 }
 
 /***/ }),
-/* 39 */
+/* 36 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ isValid)
 /* harmony export */ });
-/* harmony import */ var _isDate_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(40);
-/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(38);
-/* harmony import */ var _lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
+/* harmony import */ var _isDate_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(37);
+/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(35);
+/* harmony import */ var _lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(21);
 
 
 
@@ -2143,14 +1986,14 @@ function isValid(dirtyDate) {
 }
 
 /***/ }),
-/* 40 */
+/* 37 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ isDate)
 /* harmony export */ });
-/* harmony import */ var _lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
+/* harmony import */ var _lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(21);
 
 /**
  * @name isDate
@@ -2191,7 +2034,7 @@ function isDate(value) {
 }
 
 /***/ }),
-/* 41 */
+/* 38 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -2216,16 +2059,16 @@ function getTimezoneOffsetInMilliseconds(date) {
 }
 
 /***/ }),
-/* 42 */
+/* 39 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ subMilliseconds)
 /* harmony export */ });
-/* harmony import */ var _addMilliseconds_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(43);
-/* harmony import */ var _lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
-/* harmony import */ var _lib_toInteger_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(37);
+/* harmony import */ var _addMilliseconds_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(40);
+/* harmony import */ var _lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(21);
+/* harmony import */ var _lib_toInteger_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(34);
 
 
 
@@ -2255,16 +2098,16 @@ function subMilliseconds(dirtyDate, dirtyAmount) {
 }
 
 /***/ }),
-/* 43 */
+/* 40 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ addMilliseconds)
 /* harmony export */ });
-/* harmony import */ var _lib_toInteger_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(37);
-/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(38);
-/* harmony import */ var _lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
+/* harmony import */ var _lib_toInteger_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(34);
+/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(35);
+/* harmony import */ var _lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(21);
 
 
 
@@ -2295,7 +2138,7 @@ function addMilliseconds(dirtyDate, dirtyAmount) {
 }
 
 /***/ }),
-/* 44 */
+/* 41 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -2400,20 +2243,20 @@ var longFormatters = {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (longFormatters);
 
 /***/ }),
-/* 45 */
+/* 42 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _lib_getUTCDayOfYear_index_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(56);
-/* harmony import */ var _lib_getUTCISOWeek_index_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(54);
-/* harmony import */ var _lib_getUTCISOWeekYear_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(50);
-/* harmony import */ var _lib_getUTCWeek_index_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(52);
-/* harmony import */ var _lib_getUTCWeekYear_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(48);
-/* harmony import */ var _addLeadingZeros_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(47);
-/* harmony import */ var _lightFormatters_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(46);
+/* harmony import */ var _lib_getUTCDayOfYear_index_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(53);
+/* harmony import */ var _lib_getUTCISOWeek_index_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(51);
+/* harmony import */ var _lib_getUTCISOWeekYear_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(47);
+/* harmony import */ var _lib_getUTCWeek_index_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(49);
+/* harmony import */ var _lib_getUTCWeekYear_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(45);
+/* harmony import */ var _addLeadingZeros_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(44);
+/* harmony import */ var _lightFormatters_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(43);
 
 
 
@@ -3282,14 +3125,14 @@ function formatTimezone(offset, dirtyDelimiter) {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (formatters);
 
 /***/ }),
-/* 46 */
+/* 43 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _addLeadingZeros_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(47);
+/* harmony import */ var _addLeadingZeros_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(44);
 
 /*
  * |     | Unit                           |     | Unit                           |
@@ -3376,7 +3219,7 @@ var formatters = {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (formatters);
 
 /***/ }),
-/* 47 */
+/* 44 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -3395,18 +3238,18 @@ function addLeadingZeros(number, targetLength) {
 }
 
 /***/ }),
-/* 48 */
+/* 45 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ getUTCWeekYear)
 /* harmony export */ });
-/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(38);
-/* harmony import */ var _requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
-/* harmony import */ var _startOfUTCWeek_index_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(49);
-/* harmony import */ var _toInteger_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(37);
-/* harmony import */ var _defaultOptions_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(25);
+/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(35);
+/* harmony import */ var _requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(21);
+/* harmony import */ var _startOfUTCWeek_index_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(46);
+/* harmony import */ var _toInteger_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(34);
+/* harmony import */ var _defaultOptions_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(22);
 
 
 
@@ -3444,17 +3287,17 @@ function getUTCWeekYear(dirtyDate, options) {
 }
 
 /***/ }),
-/* 49 */
+/* 46 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ startOfUTCWeek)
 /* harmony export */ });
-/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(38);
-/* harmony import */ var _requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
-/* harmony import */ var _toInteger_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(37);
-/* harmony import */ var _defaultOptions_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(25);
+/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(35);
+/* harmony import */ var _requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(21);
+/* harmony import */ var _toInteger_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(34);
+/* harmony import */ var _defaultOptions_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(22);
 
 
 
@@ -3479,16 +3322,16 @@ function startOfUTCWeek(dirtyDate, options) {
 }
 
 /***/ }),
-/* 50 */
+/* 47 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ getUTCISOWeekYear)
 /* harmony export */ });
-/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(38);
-/* harmony import */ var _requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
-/* harmony import */ var _startOfUTCISOWeek_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(51);
+/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(35);
+/* harmony import */ var _requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(21);
+/* harmony import */ var _startOfUTCISOWeek_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(48);
 
 
 
@@ -3515,15 +3358,15 @@ function getUTCISOWeekYear(dirtyDate) {
 }
 
 /***/ }),
-/* 51 */
+/* 48 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ startOfUTCISOWeek)
 /* harmony export */ });
-/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(38);
-/* harmony import */ var _requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
+/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(35);
+/* harmony import */ var _requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(21);
 
 
 function startOfUTCISOWeek(dirtyDate) {
@@ -3538,17 +3381,17 @@ function startOfUTCISOWeek(dirtyDate) {
 }
 
 /***/ }),
-/* 52 */
+/* 49 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ getUTCWeek)
 /* harmony export */ });
-/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(38);
-/* harmony import */ var _startOfUTCWeek_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(49);
-/* harmony import */ var _startOfUTCWeekYear_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(53);
-/* harmony import */ var _requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
+/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(35);
+/* harmony import */ var _startOfUTCWeek_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(46);
+/* harmony import */ var _startOfUTCWeekYear_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(50);
+/* harmony import */ var _requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(21);
 
 
 
@@ -3565,18 +3408,18 @@ function getUTCWeek(dirtyDate, options) {
 }
 
 /***/ }),
-/* 53 */
+/* 50 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ startOfUTCWeekYear)
 /* harmony export */ });
-/* harmony import */ var _getUTCWeekYear_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(48);
-/* harmony import */ var _requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
-/* harmony import */ var _startOfUTCWeek_index_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(49);
-/* harmony import */ var _toInteger_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(37);
-/* harmony import */ var _defaultOptions_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(25);
+/* harmony import */ var _getUTCWeekYear_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(45);
+/* harmony import */ var _requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(21);
+/* harmony import */ var _startOfUTCWeek_index_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(46);
+/* harmony import */ var _toInteger_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(34);
+/* harmony import */ var _defaultOptions_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(22);
 
 
 
@@ -3597,17 +3440,17 @@ function startOfUTCWeekYear(dirtyDate, options) {
 }
 
 /***/ }),
-/* 54 */
+/* 51 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ getUTCISOWeek)
 /* harmony export */ });
-/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(38);
-/* harmony import */ var _startOfUTCISOWeek_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(51);
-/* harmony import */ var _startOfUTCISOWeekYear_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(55);
-/* harmony import */ var _requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
+/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(35);
+/* harmony import */ var _startOfUTCISOWeek_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(48);
+/* harmony import */ var _startOfUTCISOWeekYear_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(52);
+/* harmony import */ var _requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(21);
 
 
 
@@ -3624,16 +3467,16 @@ function getUTCISOWeek(dirtyDate) {
 }
 
 /***/ }),
-/* 55 */
+/* 52 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ startOfUTCISOWeekYear)
 /* harmony export */ });
-/* harmony import */ var _getUTCISOWeekYear_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(50);
-/* harmony import */ var _startOfUTCISOWeek_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(51);
-/* harmony import */ var _requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
+/* harmony import */ var _getUTCISOWeekYear_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(47);
+/* harmony import */ var _startOfUTCISOWeek_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(48);
+/* harmony import */ var _requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(21);
 
 
 
@@ -3648,15 +3491,15 @@ function startOfUTCISOWeekYear(dirtyDate) {
 }
 
 /***/ }),
-/* 56 */
+/* 53 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ getUTCDayOfYear)
 /* harmony export */ });
-/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(38);
-/* harmony import */ var _requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
+/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(35);
+/* harmony import */ var _requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(21);
 
 
 var MILLISECONDS_IN_DAY = 86400000;
@@ -3672,7 +3515,7 @@ function getUTCDayOfYear(dirtyDate) {
 }
 
 /***/ }),
-/* 57 */
+/* 54 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -3702,16 +3545,16 @@ function throwProtectedError(token, format, input) {
 }
 
 /***/ }),
-/* 58 */
+/* 55 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ parseISO)
 /* harmony export */ });
-/* harmony import */ var _constants_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(59);
-/* harmony import */ var _lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
-/* harmony import */ var _lib_toInteger_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(37);
+/* harmony import */ var _constants_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(56);
+/* harmony import */ var _lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(21);
+/* harmony import */ var _lib_toInteger_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(34);
 
 
 
@@ -3980,7 +3823,7 @@ function validateTimezone(_hours, minutes) {
 }
 
 /***/ }),
-/* 59 */
+/* 56 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -4188,6 +4031,166 @@ var secondsInMonth = secondsInYear / 12;
 
 var secondsInQuarter = secondsInMonth * 3;
 
+/***/ }),
+/* 57 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ createProject)
+/* harmony export */ });
+/* harmony import */ var _drawAllTasks_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(58);
+
+
+const storedProjects = localStorage.getItem('projects');
+let projectsList = [];
+
+if (storedProjects) {
+    projectsList = JSON.parse(storedProjects);
+}
+
+// Creates new projects for organizing tasks
+function createProject(body, tasks, projects, addProjectButton) {
+    addProjectButton.addEventListener('click', () => {
+        let newProject = document.createElement('div');
+        let projectName = document.createElement('input');
+        projectName.type = "text";
+        projectName.id = "project-name";
+        projectName.name = "project-name";
+        projectName.maxLength = "30";
+        newProject.classList.add('new-project');
+        projects.insertBefore(projectName, addProjectButton);
+        projectName.focus();
+        if (projectName == document.activeElement) {
+            projectName.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    newProject.innerText = projectName.value;
+                    projects.removeChild(projectName);
+                    projects.insertBefore(newProject, addProjectButton);
+                    projectsList.push(newProject.innerText);
+                    localStorage.setItem('projects', JSON.stringify(projectsList));
+                }
+            });
+        }
+        
+        newProject.addEventListener('click', () => {
+            body.innerHTML = '';
+            CURRENTPAGE = newProject.innerText;
+            (0,_drawAllTasks_js__WEBPACK_IMPORTED_MODULE_0__["default"])(body, tasks, newProject.innerText)
+        });
+    });
+}
+
+/***/ }),
+/* 58 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ drawAllTasks)
+/* harmony export */ });
+/* harmony import */ var _complete_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(13);
+/* harmony import */ var _expand_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(14);
+/* harmony import */ var _delete_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(15);
+/* harmony import */ var _priority_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(16);
+/* harmony import */ var _photos_expand_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(17);
+/* harmony import */ var _photos_checkbox_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(18);
+/* harmony import */ var _photos_delete_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(19);
+/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(20);
+/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(55);
+
+
+
+
+
+
+
+
+
+function drawAllTasks(body, tasks, button) {
+    for (let i = 0; i < tasks.length; i++) {
+            if (tasks[i].project == button) {
+                let task = document.createElement('div');
+                task.classList.add('task-card');
+                let infoContainer = document.createElement('div');
+                infoContainer.classList.add('info-container');
+                let checkContainer = document.createElement('div');
+                checkContainer.classList.add('check-container');
+
+                let taskTitle = document.createElement('div');
+                taskTitle.innerText = `${tasks[i].title}`;
+
+                let taskDescription = document.createElement('div');
+                taskDescription.classList.add('task-description');
+                taskDescription.innerText = `${tasks[i].description}`;
+
+                let taskDue = document.createElement('div');
+                taskDue.classList.add('due-date');
+                if (tasks[i].taskDueDate) {
+                    taskDue.innerText = `Due: ${(0,date_fns__WEBPACK_IMPORTED_MODULE_7__["default"])((0,date_fns__WEBPACK_IMPORTED_MODULE_8__["default"])(tasks[i].taskDueDate), 'MM/dd/yyy')}`;
+                }
+
+                let taskPriority = document.createElement('div');
+                taskPriority.classList.add('task-priority');
+                taskPriority.innerText = `Priority: ${tasks[i].priority}`;
+
+                let expandButton = document.createElement('img');
+                expandButton.src = _photos_expand_svg__WEBPACK_IMPORTED_MODULE_4__;
+                expandButton.classList.add('expand');
+
+                let deleteButton = document.createElement('img');
+                deleteButton.src = _photos_delete_svg__WEBPACK_IMPORTED_MODULE_6__;
+                deleteButton.classList.add('delete-task');
+
+                let checkButton = document.createElement('img');
+                checkButton.src = _photos_checkbox_svg__WEBPACK_IMPORTED_MODULE_5__;
+                checkButton.classList.add('complete-task');
+
+                body.appendChild(task);
+                task.appendChild(checkContainer);
+                task.appendChild(infoContainer);
+                task.appendChild(taskDescription);
+                task.appendChild(taskPriority);
+                checkContainer.appendChild(checkButton);
+                checkContainer.appendChild(taskTitle);
+                infoContainer.appendChild(taskDue);
+                infoContainer.appendChild(deleteButton);
+                infoContainer.appendChild(expandButton);
+
+                (0,_expand_js__WEBPACK_IMPORTED_MODULE_1__["default"])(expandButton, task, taskDescription, taskPriority);
+                (0,_complete_js__WEBPACK_IMPORTED_MODULE_0__["default"])(checkButton, task);
+                (0,_delete_js__WEBPACK_IMPORTED_MODULE_2__["default"])(deleteButton, body, task, tasks, i);
+                (0,_priority_js__WEBPACK_IMPORTED_MODULE_3__["default"])(taskPriority, task, tasks, i);
+                }
+    }
+}
+
+/***/ }),
+/* 59 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ restoreProjects)
+/* harmony export */ });
+/* harmony import */ var _drawAllTasks_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(58);
+
+
+function restoreProjects(body, tasks, projects, addProjectButton, storedProjects) {
+    for (let i = 0; i < storedProjects.length; i++) {
+        let newProject = document.createElement('div');
+        newProject.classList.add('new-project');
+        newProject.innerText = storedProjects[i];
+        projects.insertBefore(newProject, addProjectButton);
+
+        newProject.addEventListener('click', () => {
+            body.innerHTML = '';
+            CURRENTPAGE = newProject.innerText;
+            (0,_drawAllTasks_js__WEBPACK_IMPORTED_MODULE_0__["default"])(body, tasks, newProject.innerText)
+        });
+    }
+}
+
 /***/ })
 /******/ 	]);
 /************************************************************************/
@@ -4300,9 +4303,9 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _create_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(11);
-/* harmony import */ var _addProject_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(20);
-/* harmony import */ var _drawAllTasks_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(21);
-/* harmony import */ var _storedProjects__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(22);
+/* harmony import */ var _addProject_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(57);
+/* harmony import */ var _drawAllTasks_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(58);
+/* harmony import */ var _storedProjects__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(59);
 
 
 
@@ -4340,8 +4343,6 @@ homeButton.addEventListener('click', () => {
 });
 
 printButton.addEventListener('click', () => {
-    console.log(CURRENTPAGE);
-    console.log(tasks);
     localStorage.removeItem('taskList');
     localStorage.removeItem('projects');
 });

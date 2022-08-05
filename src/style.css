@@ -72,6 +72,31 @@ body {
     gap: 10px;
 }
 
+.buttons {
+    display: flex;
+    justify-self: center;
+    gap: 100px;
+}
+
+.open-form,
+.btn-console {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    text-align: center;
+    height: 50px;
+    width: 175px;
+    font-size: 32px;
+    padding: 10px;
+}
+
+.open-form:hover,
+.btn-console:hover {
+    cursor: pointer;
+    backdrop-filter: brightness(90%);
+}
+
 .add-button {
     height: 14px;
     width: auto;

@@ -35,8 +35,6 @@ homeButton.addEventListener('click', () => {
 });
 
 printButton.addEventListener('click', () => {
-    console.log(CURRENTPAGE);
-    console.log(tasks);
     localStorage.removeItem('taskList');
     localStorage.removeItem('projects');
 });

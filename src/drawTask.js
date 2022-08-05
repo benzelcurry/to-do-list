@@ -52,7 +52,6 @@ export default function addTask(body, tasks) {
         task.appendChild(taskPriority);
         checkContainer.appendChild(checkButton);
         checkContainer.appendChild(taskTitle);
-        // TRY TO CUSTOMIZE APPEARANCE WITH date-fns
         infoContainer.appendChild(taskDue);
         infoContainer.appendChild(deleteButton);
         infoContainer.appendChild(expandButton);
