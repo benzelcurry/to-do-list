@@ -481,6 +481,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ createTask)
 /* harmony export */ });
+/* harmony import */ var _drawTask_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(21);
+
+
 // Create task module
 
 class Task {
@@ -511,8 +514,16 @@ let form = document.querySelector(".form-container");
 function handleForm(event) { event.preventDefault(); } 
 form.addEventListener('submit', handleForm);
 
+const storedTasks = localStorage.getItem('taskList');
+
 function createTask() {
     let myTasks = [];
+
+    if (storedTasks) {
+        myTasks = JSON.parse(storedTasks);
+    }
+
+    let body = document.querySelector('.tasks-area');
     let taskTitle = document.querySelector('#task');
     let taskDescription = document.querySelector('#notes');
     let taskDue = document.querySelector('#due-date');
@@ -524,6 +535,7 @@ function createTask() {
         const newTask = new Task(taskTitle.value, taskDescription.value, taskDue.value, taskPriority.value, CURRENTPAGE);
         
         myTasks.push(newTask);
+        (0,_drawTask_js__WEBPACK_IMPORTED_MODULE_0__["default"])(body, myTasks);
         taskTitle.value = "";
         taskDescription.value = "";
         taskDue.value = "";
@@ -547,10 +559,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _drawAllTasks_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(13);
 
 
+const storedProjects = localStorage.getItem('projects');
 let projectsList = [];
 
+if (storedProjects) {
+    projectsList = JSON.parse(storedProjects);
+}
+
 // Creates new projects for organizing tasks
-function createProject(body, tasks, projects, addProjectButton, currentPage) {
+function createProject(body, tasks, projects, addProjectButton) {
     addProjectButton.addEventListener('click', () => {
         let newProject = document.createElement('div');
         let projectName = document.createElement('input');
@@ -721,7 +738,7 @@ function deleteTask(deleteButton, body, task, tasks, i) {
     deleteButton.addEventListener('click', () => {
         body.removeChild(task);
         tasks.splice(i, 1);
-        localStorage.setItem('taskList', tasks);
+        localStorage.setItem('taskList', JSON.stringify(tasks));
     });
 }
 
@@ -861,6 +878,32 @@ function addTask(body, tasks) {
     }
 };
 
+/***/ }),
+/* 22 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ restoreProjects)
+/* harmony export */ });
+/* harmony import */ var _drawAllTasks_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(13);
+
+
+function restoreProjects(body, tasks, projects, addProjectButton, storedProjects) {
+    for (let i = 0; i < storedProjects.length; i++) {
+        let newProject = document.createElement('div');
+        newProject.classList.add('new-project');
+        newProject.innerText = storedProjects[i];
+        projects.insertBefore(newProject, addProjectButton);
+
+        newProject.addEventListener('click', () => {
+            body.innerHTML = '';
+            CURRENTPAGE = newProject.innerText;
+            (0,_drawAllTasks_js__WEBPACK_IMPORTED_MODULE_0__["default"])(body, tasks, newProject.innerText)
+        });
+    }
+}
+
 /***/ })
 /******/ 	]);
 /************************************************************************/
@@ -976,6 +1019,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _addProject_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(12);
 /* harmony import */ var _drawTask_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(21);
 /* harmony import */ var _drawAllTasks_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(13);
+/* harmony import */ var _storedProjects__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(22);
+
 
 
 
@@ -989,9 +1034,18 @@ let printButton = document.querySelector('.btn-console');
 let taskButton = document.querySelector('.btn');
 let homeButton = document.querySelector('.home');
 window.CURRENTPAGE = "home";
-let tasks = (0,_create_js__WEBPACK_IMPORTED_MODULE_1__["default"])(CURRENTPAGE);
+let tasks = [];
 const storedTasks = localStorage.getItem('taskList');
 const storedProjects = localStorage.getItem('projects');
+
+if (storedTasks) {
+    tasks = JSON.parse(storedTasks);
+    (0,_drawAllTasks_js__WEBPACK_IMPORTED_MODULE_4__["default"])(body, JSON.parse(storedTasks), homeButton.innerText.toLowerCase());
+}
+
+if (storedProjects) {
+    (0,_storedProjects__WEBPACK_IMPORTED_MODULE_5__["default"])(body, JSON.parse(storedTasks), projects, addProjectButton, JSON.parse(storedProjects));
+}
 
 homeButton.addEventListener('click', () => {
     CURRENTPAGE = "home";
@@ -1009,20 +1063,11 @@ printButton.addEventListener('click', () => {
 });
 
 (0,_addProject_js__WEBPACK_IMPORTED_MODULE_2__["default"])(body, tasks, projects, addProjectButton);
+(0,_create_js__WEBPACK_IMPORTED_MODULE_1__["default"])();
 
-taskButton.addEventListener('click', () => {  
-    (0,_drawTask_js__WEBPACK_IMPORTED_MODULE_3__["default"])(body, tasks);
-});
-
-if (storedTasks) {
-    (0,_drawAllTasks_js__WEBPACK_IMPORTED_MODULE_4__["default"])(body, JSON.parse(storedTasks), homeButton.innerText.toLowerCase());
-}
-
-if (storedProjects) {
-    let drawProjects = JSON.parse(storedProjects);
-    console.log(drawProjects);
-    // ABLE TO STORE PROJECTS; NOW FIGURE OUT HOW TO DRAW THEM AND CREATE PROJECT FOLDERS
-}
+// taskButton.addEventListener('click', () => { 
+//     addTask(body, tasks);
+// });
 })();
 
 /******/ })()

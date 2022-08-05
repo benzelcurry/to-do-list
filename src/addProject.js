@@ -1,9 +1,14 @@
 import drawAllTasks from "./drawAllTasks.js";
 
+const storedProjects = localStorage.getItem('projects');
 let projectsList = [];
 
+if (storedProjects) {
+    projectsList = JSON.parse(storedProjects);
+}
+
 // Creates new projects for organizing tasks
-export default function createProject(body, tasks, projects, addProjectButton, currentPage) {
+export default function createProject(body, tasks, projects, addProjectButton) {
     addProjectButton.addEventListener('click', () => {
         let newProject = document.createElement('div');
         let projectName = document.createElement('input');

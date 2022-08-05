@@ -1,3 +1,5 @@
+import addTask from './drawTask.js';
+
 // Create task module
 
 class Task {
@@ -28,8 +30,16 @@ let form = document.querySelector(".form-container");
 function handleForm(event) { event.preventDefault(); } 
 form.addEventListener('submit', handleForm);
 
+const storedTasks = localStorage.getItem('taskList');
+
 export default function createTask() {
     let myTasks = [];
+
+    if (storedTasks) {
+        myTasks = JSON.parse(storedTasks);
+    }
+
+    let body = document.querySelector('.tasks-area');
     let taskTitle = document.querySelector('#task');
     let taskDescription = document.querySelector('#notes');
     let taskDue = document.querySelector('#due-date');
@@ -41,6 +51,7 @@ export default function createTask() {
         const newTask = new Task(taskTitle.value, taskDescription.value, taskDue.value, taskPriority.value, CURRENTPAGE);
         
         myTasks.push(newTask);
+        addTask(body, myTasks);
         taskTitle.value = "";
         taskDescription.value = "";
         taskDue.value = "";
