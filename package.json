@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/benzelcurry/to-do-list/issues"
   },
-  "homepage": "https://github.com/benzelcurry/to-do-list#readme",
+  // "homepage": "https://github.com/benzelcurry/to-do-list#readme",
   "devDependencies": {
     "css-loader": "^6.7.1",
     "style-loader": "^3.3.1",
