@@ -9,54 +9,56 @@ import Delete from './photos/delete.svg';
 export default function drawAllTasks(body, tasks, button) {
     for (let i = 0; i < tasks.length; i++) {
             if (tasks[i].project == button) {
-            let task = document.createElement('div');
-            task.classList.add('task-card');
-            let infoContainer = document.createElement('div');
-            infoContainer.classList.add('info-container');
-            let checkContainer = document.createElement('div');
-            checkContainer.classList.add('check-container');
+                let task = document.createElement('div');
+                task.classList.add('task-card');
+                let infoContainer = document.createElement('div');
+                infoContainer.classList.add('info-container');
+                let checkContainer = document.createElement('div');
+                checkContainer.classList.add('check-container');
 
-            let taskTitle = document.createElement('div');
-            taskTitle.innerText = `${tasks[i].title}`;
+                let taskTitle = document.createElement('div');
+                taskTitle.innerText = `${tasks[i].title}`;
 
-            let taskDescription = document.createElement('div');
-            taskDescription.classList.add('task-description');
-            taskDescription.innerText = `${tasks[i].description}`;
+                let taskDescription = document.createElement('div');
+                taskDescription.classList.add('task-description');
+                taskDescription.innerText = `${tasks[i].description}`;
 
-            let taskDue = document.createElement('div');
-            taskDue.innerText = `${tasks[i].dueDate}`;
+                let taskDue = document.createElement('input');
+                taskDue.type = "date";
+                taskDue.id = "due-date";
+                taskDue.name = "due-date";
 
-            let taskPriority = document.createElement('div');
-            taskPriority.classList.add('task-priority');
-            taskPriority.innerText = `Priority: ${tasks[i].priority}`;
+                let taskPriority = document.createElement('div');
+                taskPriority.classList.add('task-priority');
+                taskPriority.innerText = `Priority: ${tasks[i].priority}`;
 
-            let expandButton = document.createElement('img');
-            expandButton.src = Expand;
-            expandButton.classList.add('expand');
+                let expandButton = document.createElement('img');
+                expandButton.src = Expand;
+                expandButton.classList.add('expand');
 
-            let deleteButton = document.createElement('img');
-            deleteButton.src = Delete;
-            deleteButton.classList.add('delete-task');
+                let deleteButton = document.createElement('img');
+                deleteButton.src = Delete;
+                deleteButton.classList.add('delete-task');
 
-            let checkButton = document.createElement('img');
-            checkButton.src = Checkbox;
-            checkButton.classList.add('complete-task');
+                let checkButton = document.createElement('img');
+                checkButton.src = Checkbox;
+                checkButton.classList.add('complete-task');
 
-            body.appendChild(task);
-            task.appendChild(checkContainer);
-            task.appendChild(infoContainer);
-            task.appendChild(taskDescription);
-            task.appendChild(taskPriority);
-            checkContainer.appendChild(checkButton);
-            checkContainer.appendChild(taskTitle);
-            infoContainer.appendChild(taskDue);
-            infoContainer.appendChild(deleteButton);
-            infoContainer.appendChild(expandButton);
+                body.appendChild(task);
+                task.appendChild(checkContainer);
+                task.appendChild(infoContainer);
+                task.appendChild(taskDescription);
+                task.appendChild(taskPriority);
+                checkContainer.appendChild(checkButton);
+                checkContainer.appendChild(taskTitle);
+                infoContainer.appendChild(taskDue);
+                infoContainer.appendChild(deleteButton);
+                infoContainer.appendChild(expandButton);
 
-            expandTask(expandButton, task, taskDescription, taskPriority);
-            completeTask(checkButton, task);
-            deleteTask(deleteButton, body, task, tasks, i);
-            changePriority(taskPriority, task, tasks, i);
-            }
+                expandTask(expandButton, task, taskDescription, taskPriority);
+                completeTask(checkButton, task);
+                deleteTask(deleteButton, body, task, tasks, i);
+                changePriority(taskPriority, task, tasks, i);
+                }
     }
 }

@@ -2,7 +2,7 @@
 
 body {
     margin: 0;
-    font-family: 'Robot', Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
 #content {
@@ -149,7 +149,7 @@ body {
 .task-card {
     display: grid;
     background-color: #fff;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 4fr;
     width: 500px;
     height: 30px;
@@ -203,6 +203,7 @@ body {
     display: none;
     align-self: start;
     justify-self: start;
+    word-break: break-all;
 }
 
 .task-priority {
@@ -266,7 +267,7 @@ a {
   }
   
   /* input fields */
-  input[type=text], input[type=number], select {
+  input[type=text], #due-date-input, select {
     width: 50%;
     height: 40px;
     padding: 0 10px 0 10px;
@@ -274,6 +275,8 @@ a {
     border: none;
     background: #e7e8f1;
     font-size: 16px;
+    font-family: 'roboto', Arial, Helvetica, sans-serif;
+    outline: none;
   }
 
   select {

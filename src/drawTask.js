@@ -5,7 +5,7 @@ import changePriority from './priority.js';
 import Expand from './photos/expand.svg';
 import Checkbox from './photos/checkbox.svg';
 import Delete from './photos/delete.svg';
-import { format } from 'date-fns';
+import { format, parseISO } from 'date-fns';
 
 export default function addTask(body, tasks) {
     for (let i = (tasks.length - 1); i < tasks.length; i++) {
@@ -23,10 +23,11 @@ export default function addTask(body, tasks) {
         taskDescription.classList.add('task-description');
         taskDescription.innerText = `${tasks[i].description}`;
 
-        let taskDue = document.createElement('input');
-        taskDue.type = "date";
-        taskDue.id = "due-date";
-        taskDue.name = "due-date"
+        let taskDue = document.createElement('div');
+        taskDue.classList.add('due-date');
+        if (tasks[i].taskDueDate) {
+            taskDue.innerText = `Due: ${format(parseISO(tasks[i].taskDueDate), 'MM/dd/yyy')}`;
+        }
 
         let taskPriority = document.createElement('div');
         taskPriority.classList.add('task-priority');

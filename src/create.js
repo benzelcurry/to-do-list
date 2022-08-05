@@ -3,10 +3,10 @@ import addTask from './drawTask.js';
 // Create task module
 
 class Task {
-    constructor(title, description, dueDate, priority, project) {
+    constructor(title, description, taskDueDate, priority, project) {
         this.title = title;
         this.description = description;
-        this.dueDate = dueDate;
+        this.taskDueDate = taskDueDate;
         this.priority = priority;
         this.project = project;
     }
@@ -30,36 +30,41 @@ let form = document.querySelector(".form-container");
 function handleForm(event) { event.preventDefault(); } 
 form.addEventListener('submit', handleForm);
 
-const storedTasks = localStorage.getItem('taskList');
+let storedTasks = localStorage.getItem('taskList');
 
-export default function createTask() {
-    let myTasks = [];
-
+export default function createTask(tasks) {
     if (storedTasks) {
-        myTasks = JSON.parse(storedTasks);
+        tasks = JSON.parse(storedTasks);
     }
 
     let body = document.querySelector('.tasks-area');
     let taskTitle = document.querySelector('#task');
     let taskDescription = document.querySelector('#notes');
-    let taskDue = document.querySelector('#due-date');
+    // let taskDue = document.querySelector('#due-date-input');
     let taskPriority = document.querySelector('#priority');
     let submitButton = document.querySelector(".btn");
 
+    let taskDue = document.querySelector('#due-date-input');
+    let taskDueDate
+
+    // Retrieves date from HTML calendar date input form
+    taskDue.addEventListener('change', (e) => {
+        taskDueDate = (e.target.value);
+    });
+
     // New tasks get pushed to array
     submitButton.addEventListener('click', () => {
-        const newTask = new Task(taskTitle.value, taskDescription.value, taskDue.value, taskPriority.value, CURRENTPAGE);
+        const newTask = new Task(taskTitle.value, taskDescription.value, taskDueDate, taskPriority.value, CURRENTPAGE);
         
-        myTasks.push(newTask);
-        addTask(body, myTasks);
+        tasks.push(newTask);
+        addTask(body, tasks);
         taskTitle.value = "";
         taskDescription.value = "";
-        taskDue.value = "";
+        taskDueDate = "";
         taskPriority.option = "high";
         document.getElementById("myForm").style.display = "none";
 
-        localStorage.setItem('taskList', JSON.stringify(myTasks));
+        localStorage.setItem('taskList', JSON.stringify(tasks));
+        storedTasks = localStorage.getItem('taskList');
     });
-
-    return myTasks;
 }
