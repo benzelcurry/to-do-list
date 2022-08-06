@@ -4335,7 +4335,6 @@ if (storedProjects) {
 
 homeButton.addEventListener('click', () => {
     CURRENTPAGE = "home";
-    console.log(tasks);
     body.innerHTML = '';
     body.style.display = "grid";
     body.style.gridAutoRows = "minmax(auto, 50px)";
