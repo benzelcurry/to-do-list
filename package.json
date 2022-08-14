@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/benzelcurry/to-do-list#readme",
   "devDependencies": {
+    "@babel/core": "^7.18.10",
+    "@babel/preset-env": "^7.18.10",
+    "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
     "style-loader": "^3.3.1",
     "webpack": "^5.74.0",
